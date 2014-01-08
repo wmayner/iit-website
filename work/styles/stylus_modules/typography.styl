@@ -1,0 +1,96 @@
+body
+  font-family base_font
+  font-weight 300
+  color sol_primary
+  background-color sol_background
+  font-size base_font_size
+  text-align justify
+  text-shadow 0 1px 0 sol_background
+
+u
+  text-decoration underline
+
+strong
+  font-weight 400
+
+ul
+  li
+    margin-bottom .5ex
+  ul>li
+    margin-bottom 0
+  text-align left
+  padding-left 1.5em
+
+// Headers
+
+h1, h2, h3, h4, h5, h6
+  font-family base_font
+  a
+    color sol_primary
+    &:hover
+      color link_color
+      text-decoration none
+  text-align left
+
+h1
+  font-weight 400
+  font-size 125%
+
+h2
+  font-weight 400
+  font-size 110%
+
+h3, h4, h5, h6
+  font-size 100%
+
+.page-header
+  border-bottom 1px solid sol_highlight
+
+
+// Code
+
+pre, code, pre.prettyprint, code.prettyprint
+  font-family mono_font
+  background-color sol_highlight
+
+
+// Links
+
+a
+  color link_color
+  &:hover
+    text-decoration underline
+
+a.prompt
+  &:after
+    content "»"
+    color link_color
+    padding 0 0 0 .5ex 
+
+.label-info[href]:hover
+  background-color link_color
+
+// Dates
+
+.date
+  position relative
+  color sol_secondary
+  >.wrap
+    position absolute
+    bottom 0
+    right 0
+    font-size 60%
+    font-weight 300
+
+
+// xs, sm
+unquote("@media (max-width: "+sm_max+") {")
+h1.page-header
+  margin hOne_top_margin 0 10px 0
+unquote("}")
+
+// xs
+unquote("@media (max-width: "+xs_max+") {")
+body
+  font-size 0.75*base_font_size
+unquote("}")

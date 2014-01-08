@@ -1,0 +1,9 @@
+.center
+  text-align center
+
+// Fix Bootstrap's display of inline elements on xs
+span.hidden-xs
+  display inline!important
+unquote("@media (max-width: "+xs_max+") {")
+span.hidden-xs {display:none !important;}
+unquote("}")

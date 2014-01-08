@@ -1,0 +1,27 @@
+{
+  "locals": {
+    "url": "http://iit.github.io"
+  , "title": "Integrated Information Theory"
+  , "name": "Integrated Information Theory"
+  , "owner": "Center for Sleep and Consciousness, University of Wisconsin–Madison"
+  , "description": "A theory of consciousness"
+  }
+, "require": {
+    "typogr": "typogr"
+  , "moment": "moment"
+  }
+, "jade": {
+    "pretty": true
+  }
+, "plugins": [
+    "./node_modules/wintersmith-jade"
+  , "./node_modules/wintersmith-stylus"
+]
+, "markdown": {
+    "smartLists": true
+  , "smartypants": true
+  }
+, "ignore": [
+    "**/.DS_Store"
+  ]
+}

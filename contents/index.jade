@@ -1,0 +1,15 @@
+---
+template: layout.jade
+---
+
+- // Get month and year
+- var d = new Date();
+- var year = d.getFullYear();
+- var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; 
+- var month = months[d.getMonth()];
+- console.log(month)
+
+.wrap#index
+  section
+    h1.page-header Integrated Information Theory
+      

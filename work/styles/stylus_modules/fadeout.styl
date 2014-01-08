@@ -1,0 +1,19 @@
+@import "../../../node_modules/nib"
+
+#header-background
+  background-color sol_background
+  z-index 1
+  position fixed
+  top 0
+  left 0
+  right 0
+  height header_height
+#fadeout
+  z-index 100
+  position fixed
+  left 0
+  top header_height
+  right 0
+  height 1.5*header_padding
+  background linear-gradient(top, sol_background, transparent)
+
