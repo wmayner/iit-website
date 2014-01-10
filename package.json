@@ -33,6 +33,7 @@
     "grunt-shell": "*",
     "grunt-contrib-watch": "*",
     "grunt-bump": "*",
-    "nib": "*"
+    "nib": "*",
+    "grunt-contrib-coffee": "~0.8.0"
   }
 }

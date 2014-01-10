@@ -45,7 +45,19 @@ module.exports = (grunt) ->
           ext: ".jpg"
         ]
 
+    coffee:
+      compile: {
+        files: {
+          'contents/js/main.min.js': 'work/scripts/**/*.coffee'
+        }
+      }
+
     coffeelint:
+      options: {
+        'max_line_length': {
+          'level': 'warn'
+        }
+      }
       work: ["work/scripts/**/*.coffee", "Gruntfile.coffee"]
 
     wintersmith:
@@ -104,8 +116,8 @@ module.exports = (grunt) ->
 
     watch:
       js:
-        files: ["work/scripts/**/*.coffee"]
-        tasks: ["coffeelint:work"]
+        files: ["work/scripts/**/*.coffee", "Gruntfile.coffee"]
+        tasks: ["coffeelint:work", "coffee:compile"]
       stylus:
         files: ["work/styles/**/*.styl"]
         tasks: ["stylus:dev"]
@@ -141,6 +153,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-imagemin"
   grunt.loadNpmTasks "grunt-contrib-stylus"
   grunt.loadNpmTasks "grunt-contrib-clean"
+  grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-coffeelint"
   grunt.loadNpmTasks "grunt-shell"
   grunt.loadNpmTasks "grunt-line-remover"
