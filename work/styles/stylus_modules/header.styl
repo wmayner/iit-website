@@ -18,7 +18,7 @@
       color link_color
       text-decoration none
   .logo 
-    height 100px
+    height 115px
     margin auto
   .name
     margin 25px 0 15px 0
@@ -32,15 +32,6 @@
     font-size base_font_size
     padding 0
     letter-spacing 0.13ex
-  .social
-    margin 20px 0 0 0
-    img
-      margin 0 3px
-      width 60px
-    a
-      opacity 0.25
-      &:hover
-        opacity 0.4
   .email
     font-size 75%
     color sol_secondary
@@ -74,13 +65,9 @@ unquote("@media (max-width: "+xs_max+") {")
     text-align center
     margin 10px auto
     font-size 15px
-  .social
+  #main-nav
     box-sizing content-box
     margin 0 auto
-    img
-      box-sizing content-box
-      margin 0 6px
-      width 50px
 unquote("}")
 
 // sm
@@ -98,27 +85,25 @@ unquote("@media (min-width: "+sm_min+") and (max-width: "+sm_max+") {")
   .logo
     float left
     margin-top: 10px
-    height 100px
   .name
     text-align left
-    margin 0 10px 9px 135px
+    margin 0 10px 9px 145px
     font-size 180%
   .description
     font-size 100%
     text-align left
-    margin 0 10px 10px 135px
+    margin 20px 10px 10px 145px
   .email
     font-size 70%
     position absolute
     top 3px
     right header_padding
-  .social
+  #main-nav
     position absolute
     bottom header_padding
     right header_padding - 5px
-    img
-      margin 0 0 0 3px 
-      width 40px
+  .navbar
+    margin-top 15px
 unquote("}")
 
 // md
@@ -131,4 +116,16 @@ unquote("}")
 unquote("@media (min-width: "+lg_min+") {")
 .header
   width 25%
+#main-nav
+  margin-top 20px
 unquote("}")
+
+// sm, md, lg
+unquote("@media (min-width: "+sm_min+") {")
+.navbar-nav
+  float none
+  margin 0 auto
+  display table
+  table-layout fixed
+unquote("}")
+

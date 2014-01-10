@@ -18,62 +18,38 @@ html(lang='en')
         .description= locals.description
         .email
           Contact
-        nav.navbar.navbar-default(role='navigation')
+        .visible-xs
+          #main-nav.btn-group.btn-group-md(role="navigation")
+            a(href='#').btn.btn-default(type="button") Home
+            a(href='#').btn.btn-default(type="button") Calculate &Phi;
+            a(href='#').btn.btn-default(type="button") Resources
+        .visible-sm
+          #main-nav.btn-group.btn-group-md(role="navigation")
+            a(href='#').btn.btn-default(type="button") Home
+            a(href='#').btn.btn-default(type="button") Calculate &Phi;
+            a(href='#').btn.btn-default(type="button") Resources
+        .hidden-xs.hidden-sm
+          #main-nav.btn-group-vertical.btn-group-lg(role="navigation")
+            a(href='#').btn.btn-default(type="button") Home
+            a(href='#').btn.btn-default(type="button") Calculate &Phi;
+            a(href='#').btn.btn-default(type="button") Resources
+        // nav.navbar.navbar-default(role='navigation')
           // Brand and toggle get grouped for better mobile display
           .navbar-header
-            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='navbar-collapse-1')
               span.sr-only Toggle navigation
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand(href='#') Brand
+            a.navbar-brand(href='#') IIT
           // Collect the nav links, forms, and other content for toggling
-          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          #navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav
               li.active
-                a(href='#') Link
+                a(href='/index.html') Paper
               li
-                a(href='#') Link
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown')
-                  | Dropdown
-                  b.caret
-                ul.dropdown-menu
-                  li
-                    a(href='#') Action
-                  li
-                    a(href='#') Another action
-                  li
-                    a(href='#') Something else here
-                  li.divider
-                  li
-                    a(href='#') Separated link
-                  li.divider
-                  li
-                    a(href='#') One more separated link
-            form.navbar-form.navbar-left(role='search')
-              .form-group
-                input.form-control(type='text', placeholder='Search')
-              button.btn.btn-default(type='submit') Submit
-            ul.nav.navbar-nav.navbar-right
-              li
-                a(href='#') Link
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown')
-                  | Dropdown
-                  b.caret
-                ul.dropdown-menu
-                  li
-                    a(href='#') Action
-                  li
-                    a(href='#') Another action
-                  li
-                    a(href='#') Something else here
-                  li.divider
-                  li
-                    a(href='#') Separated link
-          // /.navbar-collapse
-                #header-background.visible-sm
+                a(href='Code') 
+    #header-background.visible-sm
     // #fadeout.visible-sm
     #content.container
       .wrap
