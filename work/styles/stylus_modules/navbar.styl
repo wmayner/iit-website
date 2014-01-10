@@ -1,0 +1,21 @@
+.navbar-inverse
+  border none
+  color sol_secondary
+  .navbar-brand
+    font-family display_font
+    font-size 120%
+    letter-spacing 0.25ex
+    color sol_background
+  .navbar-nav>li>a
+    color inherit
+    &:hover
+      padding-bottom 10px
+      border-bottom 5px solid cyan
+      color lighten(sol_secondary, 50%)
+  .navbar-nav>li.active>a
+    background-color darken(navbar_background, 80%)
+    color lighten(sol_secondary, 50%)
+    padding-bottom 10px
+    border-bottom 5px solid cyan
+    &:hover
+      color lighten(sol_secondary, 50%)

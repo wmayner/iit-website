@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:300,400,700|Varela+Round:400");
+@import url("http://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:300,400,700|Varela+Round:400|Ledger");
 pre,code,pre.prettyprint,code.prettyprint{background-color:#fdf6e3;-moz-border-radius:4px;-webkit-border-radius:4px;-o-border-radius:4px;-ms-border-radius:4px;-khtml-border-radius:4px;border-radius:4px;color:#657b83}
 code,code.prettyprint{padding:.4ex .6ex;margin:0 .2ex;font-size:90%}
 pre,pre.prettyprint{font-size:95%;width:100%;margin:1em 0;padding:.8em 1em;white-space:pre-wrap;border:none}
@@ -16,12 +16,13 @@ pre,pre.prettyprint{font-size:95%;width:100%;margin:1em 0;padding:.8em 1em;white
 .clo{color:#586e75}
 .dec{color:#586e75;font-style:italic}
 pre.prettyprint ol.linenums{color:#93a1a1}
+body{position:relative;padding-top:50px}
+section,.anchor{padding-top:50px;margin-top:-50px}
+.title{margin-top:0}
 body{font-family:'Open Sans','Lato','Helvetica Neue','Helvetica',sans-serif;font-weight:300;color:#657b83;background-color:#fffdf9;font-size:16pt;text-align:justify}
 u{text-decoration:underline}
 strong{font-weight:400}
-ul{text-align:left;padding-left:1.5em}
-ul li{margin-bottom:.5ex}
-ul ul>li{margin-bottom:0}
+.math-font{font-family:'Open Sans';font-size:100%;padding:0 5px;font-weight:100}
 h1,h2,h3,h4,h5,h6{font-family:'Open Sans','Lato','Helvetica Neue','Helvetica',sans-serif;text-align:left}
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:#657b83;}
 h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{color:#2aa198;text-decoration:none}
@@ -31,7 +32,7 @@ h3,h4,h5,h6{font-size:100%}
 .page-header{line-height:1.5;border-bottom:1px solid #f4f6f6}
 pre,code,pre.prettyprint,code.prettyprint{font-family:'Inconsolata','Monaco','Menlo','Courier New',monospace;background-color:#f4f6f6}
 a{color:#2aa198;}
-a:hover{text-decoration:underline}
+a:hover{color:#2aa198;text-decoration:underline}
 a.prompt:after{content:"»";color:#2aa198;padding:0 0 0 .5ex}
 .label-info[href]:hover{background-color:#2aa198}
 .date{position:relative;color:#93a1a1;}
@@ -60,56 +61,49 @@ span.hidden-xs{display:inline !important}
 span.hidden-xs{display:none !important}
 }
 .notfound{text-align:center;padding:40px;font-size:60pt}
-.header{position:fixed;z-index:10;top:0;right:0;bottom:0;left:auto;text-align:center;}
-.header >.wrap{margin-top:80px;position:absolute;left:0;top:0;width:267px}
-.header a{color:#586e75;}
-.header a:hover{color:#2aa198;text-decoration:none}
-.header .logo{height:115px;margin:auto}
-.header .name{margin:25px 0 15px 0;font-family:'Varela Round';text-align:center;font-size:150%;text-transform:uppercase;letter-spacing:.2ex;color:#073642}
-.header .description{font-size:16pt;padding:0;letter-spacing:.13ex}
-.header .email{font-size:75%;color:#93a1a1;margin:20px 0 20px 0;text-align:right}
+.navbar-inverse{border:none;color:#93a1a1;}
+.navbar-inverse .navbar-brand{font-family:'Ledger','Helvetica Neue',sans-serif;font-size:120%;letter-spacing:.25ex;color:#fffdf9}
+.navbar-inverse .navbar-nav>li>a{color:inherit;}
+.navbar-inverse .navbar-nav>li>a:hover{padding-bottom:10px;border-bottom:5px solid #2aa198;color:#c9d0d0}
+.navbar-inverse .navbar-nav>li.active>a{background-color:#070707;color:#c9d0d0;padding-bottom:10px;border-bottom:5px solid #2aa198;}
+.navbar-inverse .navbar-nav>li.active>a:hover{color:#c9d0d0}
+.iit-header{padding:40px 15px;font-size:100%;text-shadow:0 1px 0 rgba(0,0,0,0.15);}
+.iit-header h1{font-family:'Varela Round';font-size:150%;text-transform:uppercase;letter-spacing:.2ex}
+.iit-header p{font-weight:300;line-height:1.5}
+.iit-header .container{position:relative}
+.iit-header .logo{float:left;margin-right:35px;display:inline-block;height:100px}
 @media (max-width: 767px) {
-.header{font-size:25px;position:static;width:100%;text-align:center;}
-.header >.wrap{padding:25px 25px 0 25px;position:static;width:100%;height:100%;margin:0}
-.header .logo{margin:0 auto;height:50px}
-.header .name{margin:15px auto 5px auto;font-size:30px}
-.header .description{margin:0 auto;padding:0;font-size:19px}
-.header .email{text-align:center;margin:10px auto;font-size:15px}
-.header #main-nav{box-sizing:content-box;margin:0 auto}
 }
 @media (min-width: 768px) and (max-width: 991px) {
-.header{width:100%;height:185px;text-align:left;}
-.header >.wrap{position:relative;width:100%;height:100%;padding:25px;margin:0}
-.header .logo{float:left;margin-top:10px}
-.header .name{text-align:left;margin:0 10px 9px 145px;font-size:180%}
-.header .description{font-size:100%;text-align:left;margin:20px 10px 10px 145px}
-.header .email{font-size:70%;position:absolute;top:3px;right:25px}
-.header #main-nav{position:absolute;bottom:25px;right:20px}
-.header .navbar{margin-top:15px}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-.header{width:30%}
 }
 @media (min-width: 1200px) {
-.header{width:25%}
-#main-nav{margin-top:20px}
 }
-@media (min-width: 768px) {
-.navbar-nav{float:none;margin:0 auto;display:table;table-layout:fixed}
+@media (min-width: 992px) {
+.iit-header p{margin-right:380px}
+}
+.iit-sidebar{text-align:left;}
+.iit-sidebar.affix{position:static;position:fixed;top:70px}
+.iit-sidebar .nav > li > a{display:block;color:#93a1a1;padding:5px 20px}
+.iit-sidebar .nav .nav{display:none;margin-bottom:8px;}
+.iit-sidebar .nav .nav > li > a{padding-top:3px;padding-bottom:3px;padding-left:30px;font-size:80%}
+.iit-sidebar .nav .nav .nav > li > a{font-size:60%}
+.iit-sidebar.affix-bottom{position:absolute}
+.iit-sidenav{margin-top:10px;margin-bottom:10px;padding-top:10px;padding-bottom:10px;text-shadow:0 1px 0 #fff;background-color:#f4f6f6;border-radius:5px}
+.iit-sidebar .nav > li > a:hover,.iit-sidebar .nav > li > a:focus{text-decoration:none;background-color:#ecefef;border-right:3px solid #93a1a1}
+.iit-sidebar .nav > .active > a,.iit-sidebar .nav > .active:hover > a,.iit-sidebar .nav > .active:focus > a{font-weight:400;color:#657b83;background-color:transparent;border-right:3px solid #93a1a1}
+@media (min-width: 992px) {
+.iit-sidebar .nav > .active > ul{display:block}
+.iit-sidebar.affix,.iit-sidebar.affix-bottom{width:213px}
+.iit-sidebar.affix-bottom .bs-sidenav,.iit-sidebar.affix .bs-sidenav{margin-top:0;margin-bottom:0}
+}
+@media (min-width: 1200px) {
+.iit-sidebar.affix-bottom,.iit-sidebar.affix{width:263px}
 }
 #header-background{background-color:#fffdf9;z-index:5;position:fixed;top:0;left:0;right:0;height:185px}
 #fadeout{z-index:100;position:fixed;left:0;top:185px;right:0;height:37.5px;background:-webkit-linear-gradient(top, #fffdf9, transparent);background:-moz-linear-gradient(top, #fffdf9, transparent);background:-o-linear-gradient(top, #fffdf9, transparent);background:-ms-linear-gradient(top, #fffdf9, transparent);background:linear-gradient(to bottom, #fffdf9, transparent)}
 footer .copy{margin-top:100px;color:#93a1a1;font-size:60%;text-align:center}
 @media (max-width: 767px) {
 footer .copy{margin:20px 0 -20px 0;text-align:center}
-}
-#content{z-index:0;margin:40px 0 0 0;padding:0 7% 0 7%;width:75%}
-@media (max-width: 991px) {
-#content{width:100%;padding:0 20px;margin:0}
-}
-@media (min-width: 768px) and (max-width: 991px) {
-#content{margin:185px 0 0 0}
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-#content{padding:0 5%;width:70%}
 }
