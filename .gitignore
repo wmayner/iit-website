@@ -18,3 +18,7 @@ npm-debug.log
 docs
 build
 aws-credentials.json
+
+contents/paper.html
+contents/paper.jade
+
