@@ -25,17 +25,95 @@ template: layout.jade
             ul.nav
               li
                 a(href="#axioms-postulates-and-identities") Axioms, postulates, and identities
-              ul.nav
-                li
-                  a(href="#axioms") Axioms
-                li
-                  a(href="#postulates") Postulates
-                li
-                  a(href="#mechanisms") Mechanisms
-                li
-                  a(href="#systems-of-mechanisms") Systems of mechanisms
+                ul.nav
+                  li
+                    a(href="#axioms") Axioms
+                  li
+                    a(href="#postulates") Postulates
+                  li
+                    a(href="#mechanisms") Mechanisms
+                  li
+                    a(href="#systems-of-mechanisms") Systems of mechanisms
+                  li
+                    a(href="#identities") Identities
+              li
+                a(href="#mechanisms-1") Mechanisms
+                ul.nav
+                  li
+                    a(href="#existence") Existence
+                  li
+                    a(href="#composition") Composition
+                  li
+                    a(href="#information-cause-effect-repertoires-and-cause-effect-information-cei") Information
+                  li
+                    a(href="#integration-irreducible-cause-effect-repertoires-and-integrated-information-varphi") Integration
+                  li
+                    a(href="#exclusion-a-maximally-irreducible-cause-effect-repertoire-mice-specified-by-a-subset-of-elements-a-concept") Exclusion
+              li
+                a(href="#systems-of-mechanisms-1") Systems of mechanisms
+                ul.nav
+                  li
+                    a(href="#information-conceptual-structure-constellation-of-concepts-in-concept-space-and-conceptual-information-ci") Information
+                  li
+                    a(href="#integration-irreducible-conceptual-structure-and-integrated-conceptual-information-phi") Integration
+                  li
+                    a(href="#exclusion-a-maximally-irreducible-conceptual-structure-mics-specified-by-a-set-of-elements-a-complex") Exclusion
+                  li
+                    a(href="#identity-between-an-experience-and-a-maximally-irreducible-conceptual-structure-mics-or-quale-sensu-lato-generated-by-a-complex") Identity between an experience and a MICS
           li
-            a(href="#section1") Section 5
+            a(href="#results-and-discussion") Results and Discussion
+            ul.nav
+              li
+                a(href="#a-system-may-condense-into-a-main-complex-and-several-minor-complexes") Main and minor complexes
+              li
+                a(href="#consciousness-and-connectivity-modular-homogeneous-and-specialized-networks") Consciousness and connectivity
+              li
+                a(href="#consciousness-and-activity-inactive-systems-can-be-conscious") Consciousness and activity
+              li
+                a(href="#simple-systems-can-be-conscious-a-minimally-conscious-photodiode") Simple systems can be conscious
+              li
+                a(href="#complex-systems-can-be-unconscious-a-zombie-feed-forward-network") Complex systems can be unconscious
+              li
+                a(href="#conscious-complexes-and-unconscious-zombie-systems-can-be-functionally-equivalent") Conscious and unconscious systems can be functionally equivalent
+              li
+                a(href="#the-concepts-within-a-complex-are-self-generated-self-referential-and-holistic") Concepts within a complex are self-generated, self-referential, and holistic
+              li
+                a(href="#limitations-and-future-directions") Limitations and future directions
+          li
+            a(href="#supplementary-material") Supplementary&#32;Material
+            ul.nav
+              li
+                a(href="#main-differences-between-iit-3") Differences&#32;between&#32;IIT&#32;3.0&#32;and&#32;earlier&#32;versions
+              li
+                a(href="#conditionally-independent-mechanisms") Conditionally&#32;independent&#32;mechanisms
+              li
+                a(href="#boundary-conditions") Boundary&#32;conditions
+              li
+                a(href="#cause-effect-repertoire-unconstrained-repertoire-puc-and-partitions") Cause-effect&#32;repertoire, unconstrained&#32;repertoire <span class="math">\(p^{uc}\)</span>, and partitions
+                ul.nav
+                  li
+                    a(href="#cause-repertoire") Cause&#32;repertoire
+                  li
+                    a(href="#unconstrained-cause-repertoire") Unconstrained cause&#32;repertoire
+                  li
+                    a(href="#effect-repertoire") Effect&#32;repertoire
+                  li
+                    a(href="#unconstrained-effect-repertoire") Unconstrained&#32;effect&#32;repertoire
+                  li
+                    a(href="#partitions") Partitions
+              li
+                a(href="#earth-movers-distance") Earth&#32;mover’s&#32;distance
+                ul.nav
+                  li
+                    a(href="#distance-for-probability-distributions") Distance&#32;for&#32;probability&#32;distributions
+                  li
+                    a(href="#distance-for-constellations-of-concepts") Distance&#32;for&#32;constellations&#32;of&#32;concepts
+              li
+                a(href="#motivation-for-exclusion-at-the-level-of-mechanisms") Motivation&#32;for&#32;exclusion&#32;at&#32;the&#32;level&#32;of&#32;mechanisms
+              li
+                a(href="#some-differences-between-integrated-information-and-shannon-information") Differences&#32;between&#32;integrated&#32;information&#32;and&#32;Shannon&#32;information
+          li
+            a(href="#acknowledgments") Acknowledgments
     .col-md-9(role="main")
       .wrap#index
         h1.page-header.title From the phenomenology to the mechanisms of consciousness: Integrated Information Theory 3.0
@@ -46,7 +124,7 @@ template: layout.jade
           span.math  \(^{1,\dagger}\)
           | , Giulio Tononi
           span.math  \(^{1,\ast}\)
-        p
+        p.footnote
           span.math  \(^1\)
           | Department of Psychiatry, University of Wisconsin, Madison, WI, USA
           br
@@ -58,7 +136,7 @@ template: layout.jade
           br
           span.math  \(^\ast\)
           | E-mail correspondence to 
-          a(href="mailto:gtononi@wisc.edu") gtononi@wisc.edu
+          a(href="mailto:gtononi@wisc.edu") gtononi@wisc.edu.
       section#abstract
         h1.page-header.unnumbered Abstract
         p
@@ -130,113 +208,87 @@ template: layout.jade
         .anchor#axioms
           h3.unnumbered Axioms
         p The central axioms, which are taken to be immediately evident, are as follows:
-        dl
+        dl.dl-horizontal
           dt Existence.
-          dd
-            p
-              | Consciousness exists---it is an undeniable aspect of reality. Paraphrasing Descartes, “I experience therefore I am”.
+          dd Consciousness exists---it is an undeniable aspect of reality. Paraphrasing Descartes, “I experience therefore I am”.
           dt Composition.
-          dd
-            p
-              | Consciousness is structured: each experience consists of multiple aspects in various combinations. Within the same experience, one can see, for example, left and right, red and blue, a triangle and a square, a red triangle on the left, a blue square on the right, and so on.
+          dd Consciousness is structured: each experience consists of multiple aspects in various combinations. Within the same experience, one can see, for example, left and right, red and blue, a triangle and a square, a red triangle on the left, a blue square on the right, and so on.
           dt Information.
-          dd
-            p
-              | Consciousness is informative: each experience differs in its particular way from other possible experiences. Thus, an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences. A small subset of these possible experiences includes, for example, all the frames of all possible movies.
+          dd Consciousness is informative: each experience differs in its particular way from other possible experiences. Thus, an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences. A small subset of these possible experiences includes, for example, all the frames of all possible movies.
           dt Integration.
-          dd
-            p
-              | Consciousness is integrated: each experience is (strongly) irreducible to non-interdependent components. Thus, experiencing the word “SONO” written in the middle of a blank page is irreducible to an experience of the word “SO” at the right border of a half-page, plus an experience of the word “NO” on the left border of another half page---the experience is whole. Similarly, seeing a red triangle is irreducible to seeing a triangle but no red, plus a red patch but no triangle.
+          dd Consciousness is integrated: each experience is (strongly) irreducible to non-interdependent components. Thus, experiencing the word “SONO” written in the middle of a blank page is irreducible to an experience of the word “SO” at the right border of a half-page, plus an experience of the word “NO” on the left border of another half page---the experience is whole. Similarly, seeing a red triangle is irreducible to seeing a triangle but no red, plus a red patch but no triangle.
           dt Exclusion.
-          dd
-            p
-              | Consciousness is exclusive: each experience excludes all others---at any given time there is only one experience having its full content, rather than a superposition of multiple partial experiences; each experience has definite borders---certain things can be experienced and others cannot; each experience has a particular spatial and temporal grain---it flows at a particular speed, and it has a certain resolution such that some distinctions are possible and finer or coarser distinctions are not.
+          dd Consciousness is exclusive: each experience excludes all others---at any given time there is only one experience having its full content, rather than a superposition of multiple partial experiences; each experience has definite borders---certain things can be experienced and others cannot; each experience has a particular spatial and temporal grain---it flows at a particular speed, and it has a certain resolution such that some distinctions are possible and finer or coarser distinctions are not.
         .anchor#postulates
           h3.unnumbered Postulates
-        p
-          | To parallel the phenomenological axioms, IIT posits ontological postulates. These list the set of properties physical systems must satisfy in order to generate experience.
-        dl
+        p To parallel the phenomenological axioms, IIT posits ontological postulates. These list the set of properties physical systems must satisfy in order to generate experience.
+        dl.dl-horizontal
           dt Existence.
-          dd
-            p Mechanisms in a state exist. A system is a set of mechanisms.
+          dd Mechanisms in a state exist. A system is a set of mechanisms.
           dt Composition.
-          dd
-            p Elementary mechanisms can be combined into higher order ones.
-        p
-          | The next three postulates, information, integration, and exclusion, apply first to individual mechanisms and then to systems of mechanisms.
+          dd Elementary mechanisms can be combined into higher order ones.
+        p The next three postulates, information, integration, and exclusion, apply first to individual mechanisms and then to systems of mechanisms.
         .anchor#mechanisms
           h3.unnumbered Mechanisms
-        dl
+        dl.dl-horizontal
           dt Information.
-          dd
-            p
-              | A mechanism can contribute to consciousness only if it specifies “differences that make a difference” within a system. That is, a mechanism in a state generates information only if it constrains the states of a system that can be its possible causes and effects---its
-              em  cause-effect repertoire.
-              | The more selective the possible causes and effects, the higher the
-              em  cause-effect information cei 
-              | specified by the mechanism.
+          dd A mechanism can contribute to consciousness only if it specifies “differences that make a difference” within a system. That is, a mechanism in a state generates information only if it constrains the states of a system that can be its possible causes and effects---its
+            em  cause-effect repertoire.
+            | The more selective the possible causes and effects, the higher the
+            em  cause-effect information cei 
+            | specified by the mechanism.
           dt Integration.
-          dd
-            p
-              | A mechanism can contribute to consciousness only if it specifies a cause-effect repertoire (information) that is
-              em  irreducible 
-              | to independent components.
-              em  Integration/irreducibility 
-              span.math  \(\varphi\)
-              |  is assessed by partitioning the mechanism and measuring what difference this makes to its cause-effect repertoire.
+          dd A mechanism can contribute to consciousness only if it specifies a cause-effect repertoire (information) that is
+            em  irreducible 
+            | to independent components.
+            em  Integration/irreducibility 
+            span.math  \(\varphi\)
+            |  is assessed by partitioning the mechanism and measuring what difference this makes to its cause-effect repertoire.
           dt Exclusion.
-          dd
-            p
-              | A mechanism can contribute to consciousness at most one cause-effect repertoire---its
-              em  maximally irreducible 
-              | cause-effect repertoire (MICE, or
-              em  quale sensu stricto 
-              | (in the narrow sense of the word,
-              span.citation
-              | )). If the MICE exists, the mechanism constitutes a
-              em  concept.
-              |
+          dd A mechanism can contribute to consciousness at most one cause-effect repertoire---its
+            em  maximally irreducible 
+            | cause-effect repertoire (MICE, or
+            em  quale sensu stricto 
+            | (in the narrow sense of the word,
+            span.citation
+            | )). If the MICE exists, the mechanism constitutes a
+            em  concept.
+            |
         .anchor#systems-of-mechanisms
           h3.unnumbered Systems of mechanisms
-        dl
+        dl.dl-horizontal
           dt Information.
-          dd
-            p
-              | A set of elements can be conscious only if its mechanisms specify a set of “differences that make a difference”---i.e. a
-              em  conceptual structure.
-              | A conceptual structure is a
-              em  constellation 
-              | of points in concept space, where each axis is a possible past/future state of the set of elements, and each point is a concept specifying differences that make a difference within the set. The higher the number of different concepts and their
-              span.math  \(\varphi^{\rm Max}\)
-              |  value, the higher the
-              em  conceptual information CI 
-              | that specifies a particular constellation and distinguishes it from other possible constellations.
+          dd A set of elements can be conscious only if its mechanisms specify a set of “differences that make a difference”---i.e. a
+            em  conceptual structure.
+            | A conceptual structure is a
+            em  constellation 
+            | of points in concept space, where each axis is a possible past/future state of the set of elements, and each point is a concept specifying differences that make a difference within the set. The higher the number of different concepts and their
+            span.math  \(\varphi^{\rm Max}\)
+            |  value, the higher the
+            em  conceptual information CI 
+            | that specifies a particular constellation and distinguishes it from other possible constellations.
           dt Integration.
-          dd
-            p
-              | A set of elements can be conscious only if its mechanisms specify a conceptual structure that is
-              em  irreducible 
-              | to independent components (strong integration).
-              em  Strong integration/irreducibility 
-              span.math  \(\Phi\)
-              |  is assessed by partitioning the set of elements into subsets with unidirectional cuts.
+          dd A set of elements can be conscious only if its mechanisms specify a conceptual structure that is
+            em  irreducible 
+            | to independent components (strong integration).
+            em  Strong integration/irreducibility 
+            span.math  \(\Phi\)
+            |  is assessed by partitioning the set of elements into subsets with unidirectional cuts.
           dt Exclusion.
-          dd
-            p
-              | Of all overlapping sets of elements, only one set can be conscious---the one whose mechanisms specify a conceptual structure that is
-              em  maximally irreducible (MICS) 
-              | to independent components. A local maximum of integrated information
-              span.math  \(\Phi^{\rm Max}\)
-              |  (over elements, space, and time) is called a
-              em  complex.
-              |
+          dd Of all overlapping sets of elements, only one set can be conscious---the one whose mechanisms specify a conceptual structure that is
+            em  maximally irreducible (MICS) 
+            | to independent components. A local maximum of integrated information
+            span.math  \(\Phi^{\rm Max}\)
+            |  (over elements, space, and time) is called a
+            em  complex.
+            |
         .anchor#identities
           h3.unnumbered Identities
         p
           | Finally, IIT posits identities between phenomenological aspects and informational/causal aspects of physical systems. The central identity is the following:
         p
           | The maximally irreducible conceptual structure (
-          em MICS)
+          em MICS) 
           | generated by a complex of elements is identical to its experience. The constellation of concepts of the MICS completely specifies the quality of the experience (its
           em  quale ``sensu lato" 
           | (in the broad sense of the term
@@ -541,7 +593,8 @@ template: layout.jade
           span.math  \(ei\)
           | :
         p
-          span.math  \[cei(ABC^{p,f}|A = 1) = \min [ci(ABC^p|A = 1),ei(ABC^f|A = 1)] = 0.25.\]
+          //TODO: fix this math
+          span.math \[ $$ \begin{eqnarray} cei\left(ABC^{p,f} | A = 1\right) &=& \min [ci\left(ABC^p | A = 1\right),ei\left(ABC^f | A = 1\right)] \\\\ &=& 0.25.\end{eqnarray} $$ \]
         p
            | The motivation for choosing the minimum is illustrated in Fig. [fig:inputoutput]. First, consider an element that receives inputs from the system but sends no output to it (element
           span.math  \(A\)
@@ -1662,8 +1715,7 @@ template: layout.jade
           span.citation
           | .
         .anchor#cause-effect-repertoire-unconstrained-repertoire-puc-and-partitions
-          h2.unnumbered
-          | Cause-effect repertoire, unconstrained repertoire
+          h2.unnumbered Cause-effect repertoire, unconstrained repertoire
           span.math  \(p^{uc}\)
           | , and partitions
         p
@@ -2133,149 +2185,161 @@ template: layout.jade
         h1.page-header.unnumbered Acknowledgments
         p
           | We thank Chiara Cirelli, Lice Ghilardi, Melanie Boly, Christof Koch, and Marcello Massimini for many invaluable discussions concerning the concepts presented here. We also thank Brad Postle, Barry van Veen, Virgil Griffiths, Atif Hashmi, Erik Hoel, Matteo Mainetti, Andy Nere, Umberto Olcese, and Puneet Rana. We are especially grateful to V. Griffith for his contribution to characterizing the concept of synergy and its relation to integrated information; to M. Mainetti for his help in characterizing the proper metric for conceptual spaces. For developing the software used to compute maximally irreducible integrated conceptual structures we are indebted to B. Shababo, A. Nere, A. Hashmi, U. Olcese, and P. Rana. This work was supported by a Paul Allen Family Foundation grant and by the McDonnell Foundation.
-        p
-          span 50
-          | Le Q V. et al. (2011) Building high-level features using large scale unsupervised learning. In: ICML’2012.
-        p
-          | The DeepQA Research Team (2013) Available: http://researcher.ibm.com/researcher/view\_project.php?id=2099
-          | . Accessed October 21, 2013.
-        p
-          | Thompson C (2010) Smarter Than You Think---I.B.M.’s Supercomputer to Challenge “Jeopardy!” Champions. N Y Times Mag.
-        p
-          | Tononi G (2004) An information integration theory of consciousness. BMC Neurosci 5: 42.
-        p
-          | Tononi G (2008) Consciousness as integrated information: a provisional manifesto. Biol Bull 215: 216-242.
-        p
-          | Tononi G (2012) Integrated information theory of consciousness: an updated account. Arch Ital Biol 150: 56-90.
-        p
-          | Baars BJ (1988) A Cognitive Theory of Consciousness (Cambridge University Press).
-        p Crick F, Koch C (2003) A framework for consciousness. Nat Neurosci 6: 119-126.
-        p
-          | Koch C (2004) The Quest for Consciousness: A Neurobiological Approach (Roberts and Co.).
-        p
-          | Dehaene S, Changeux JP (2011) Experimental and theoretical approaches to conscious processing. Neuron 70: 200–27. Chalmers DJ (1996) The Conscious Mind: In Search of a Fundamental Theory (Oxford University Press).
-        p
-          | Tononi G, Koch C (2008) The neural correlates of consciousness: an update. Ann N Y Acad Sci 1124: 239-61.
-        p
-          | Tononi G, Laureys S (2009) The neurology of consciousness: an overview. The neurology of consciousness, 375-412.
-        p
-          | Casali AG, Gosseries O, Rosanova M, Boly M, Sarasso S, et al. (2013) A theoretically based index of consciousness independent of sensory processing and behavior. Science translational medicine 5(198): 198ra105-198ra105.
-        p Oizumi et al. (in prep)
-        p
-          | Tononi G (2001) Information measures for conscious experience. Arch Ital Biol 139:367-71.
-        p
-          | Balduzzi D, Tononi G (2008) Integrated information in discrete dynamical systems: Motivation and theoretical framework. PLoS Comput Biol 4: e1000091.
-        p
-          | Balduzzi D, Tononi G (2009) Qualia: the geometry of integrated information. PLoS Comput Biol 5: e1000462.
-        p
-          | Hoel E, Albantakis L, Tononi G (2013) Quantifying causal emergence shows that ``macro“ can beat ``micro”. Proc Natl Acad Sci: In press.
-        p
-          | Ay N, Polani D (2008) Information Flows in Causal Networks. Adv Complex Syst 11:17–41.
-        p
-          | Korb KB, Nyberg EP, Hope L (2011) in Causality in the Sciences (Oxford University Press, Oxford).
-        p
-          | Griffith V, Koch C (2012) Quantifying synergistic mutual information. arXiv preprint arXiv:1205.4265.
-        p
-          | Wilson RJ (1985) Introduction to Graph Theory, 3/e (Longman Scientific & Technical).
-        p
-          | Plum F, Posner JB (1982) The Diagnosis of Stupor and Coma (Oxford University Press).
-        p
-          | Tononi G, Edelman GM (1998) Consciousness and complexity. Science 282: 1846-1851.
-        p
-          | Gazzaniga MS (2005) Forty-five years of split-brain research and still going strong. Nat Rev Neurosci 6:653–9.
-        p
-          | Lynn S, Rhue J (1994) Dissociation: Clinical and theoretical perspectives (Guilford Press).
-        p
-          | Mudrik L, Breska A, Lamy D, Deouell LY (2011) Integration without awareness: expanding the limits of unconscious processing.
-          em  Psychol Sci 
-          | 22: 764–70.
-        p
-          | Mudrik, L, Faivre N, Koch S (2013) Information integration in the absence of awareness. Trends in Cognitive Sciences, in press.
-        p Glickstein M (2007) What does the cerebellum really do? Curr Biol 17:R824–R827.
-        p
-          | Schmahmann JD, Weilburg JB, Sherman JC (2007) The neuropsychiatry of the cerebellum---insights from the clinic. Cerebellum 6:254–67.
-        p Boyd CAR (2010) Cerebellar agenesis revisited. Brain 133:941–4.
-        p
-          | Cohen D (1998) Patches of synchronized activity in the cerebellar cortex evoked by mossy-fiber stimulation: Questioning the role of parallel fibers. Proc Natl Acad Sci 95:15032–15036.
-        p
-          | Bower JM (2002) The Organization of Cerebellar Cortical Circuitry Revisited. Implications for Function. Ann N Y Acad Sci 978:135–155.
-        p Sporns O (2010) Networks of the Brain (MIT Press).
-        p
-          | van den Heuvel MP, Sporns O (2013) An anatomical substrate for integration among functional networks in human cortex. J Neurosci 33:14489–500.
-        p
-          | Massimini M et al. (2005) Breakdown of cortical effective connectivity during sleep. Science 309:2228–32.
-        p
-          | 1. Ferrarelli F et al. (2010) Breakdown in cortical effective connectivity during midazolam-induced loss of consciousness. Proc Natl Acad Sci U S A 107:2681–6.
-        p
-          | Sanes DH, Reh TA, Harris WA (2011) Development of the Nervous System (Academic Press).
-        p
-          | Sullivan PR (1995) Contentless Consciousness and Information-Processing Theories of Mind. Philos Psychiatry, Psychol 2:51–59.
-        p
-          | Edelman GM (1989) The Remembered Present: A Biological Theory of Consciousness (Basic Books).
-        p
-          | Harth E (1993) The creative loop: How the brain makes a mind (Addison-Wesley, Reading, MA).
-        p Hofstadter DR (2007) I Am a Strange Loop (Basic Books).
-        p
-          | Lamme VAF (2003) Why visual attention and awareness are different. Trends Cogn Sci 7:12–18.
-        p
-          | Imas OA, Ropella KM, Ward BD, Wood JD, Hudetz AG (2005) Volatile anesthetics disrupt frontal-posterior recurrent information transfer at gamma frequencies in rat. Neurosci Lett 387:145–150.
-        p
-          | Boly M et al. (2012) Connectivity changes underlying spectral EEG changes during propofol-induced loss of consciousness. J Neurosci 32:7082–90.
-        p
-          | Mashour GA (2013) Cognitive unbinding: A neuroscientific paradigm of general anesthesia and related states of unconsciousness. Neurosci Biobehav Rev.
-        p Koch C, Crick F (2001) The zombie within. Nature 411: 893.
-        p
-          | Boly M et al. (2011) Preserved feedforward but impaired top-down processes in the vegetative state. Science 332:858–62.
-        p
-          | Cybenko G (1989) Approximation by superpositions of a sigmoidal function. Math Control Signals Syst 2: 303-314.
-        p
-          | Hornik K, Stinchcombe M, White H (1989) Multilayer feedforward networks are universal approximators. Neural Networks 2: 359-366.
-        p
-          | Rumelhart D, Hinton G, Williams R (1986) Learning internal representations by error propagation, Parallel distributed processing, 1986. Cambridge, MA.
-        p
-          | Goldman M (2009) Memory without feedback in a neural network. Neuron 61: 499–501.
-        p
-          | Dalal N, Triggs B (2005) in 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR’05) (IEEE), pp 886–893.
-        p
-          | Serre T, Wolf L, Bileschi S, Riesenhuber M, Poggio T (2007) Robust object recognition with cortex-like mechanisms. IEEE Trans Pattern Anal Mach Intell 29:411–26.
-        p
-          | Sung K-K, Poggio T (1998) Example-based learning for view-based human face detection. IEEE Trans Pattern Anal Mach Intell 20:39–51.
-        p
-          | Zhao W, Chellappa R, Phillips PJ, Rosenfeld A (2003) Face recognition. ACM Comput Surv 35:399–458.
-        p
-          | Poggio T, Ullman S (2013) Vision: are models of object recognition catching up with the brain? Ann N Y Acad Sci.
-        p
-          | Crick F, Koch C (1995) Are we aware of neural activity in primary visual cortex? Nature 375: 121–123.
-        p Blake R, Logothetis NK (2002) Visual competition. Nat Rev Neurosci 3: 13–21.
-        p
-          | Tong F (2003) Primary visual cortex and visual awareness. Nat Rev Neurosci 4:219–29.
-        p
-          | Pollen DA (2008) Fundamental requirements for primary visual perception. Cereb Cortex 18:1991–8.
-        p
-          | Tononi G, Sporns O, Edelman GM (1996) A complexity measure for selective matching of signals by the brain. Proc Natl Acad Sci U S A 93:3422–3427.
-        p
-          | Friston K, Kiebel S (2009) Predictive coding under the free-energy principle. Philos Trans R Soc Lond B Biol Sci 364:1211–21.
-        p
-          | Friston K (2010) The free-energy principle: a unified brain theory? Nat Rev Neurosci 11:127–38.
-        p
-          | Barrett AB, Seth AK (2011) Practical measures of integrated information for time-series data. PLoS Comput Biol 7:e1001052.
-        p
-          | Hashmi A, Nere A, Tononi G (2013) Sleep-Dependent Synaptic Down-Selection (II): Single-Neuron Level Benefits for Matching, Selectivity, and Specificity. Front Neurol 4:148.
-        p
-          | Albantakis L, Hintze A, Koch, C, Adami C, Tononi G (2013) Information Matching---Environment dependent increase in integrated information (<span class="math">\(\Phi\)</span>). European Conference on Complex Systems (ECCS13).
-        p
-          | Edlund J a et al. (2011) Integrated information increases with fitness in the evolution of animats. PLoS Comput Biol 7:e1002236.
-        p
-          | Joshi NJ, Tononi G, Koch C (2013) The minimal complexity of adapting agents increases with fitness. PLoS Comput Biol 9:e1003111.
-        p https://github.com/Albantakis/iit/tree/IIT-3.0-Program
-        p
-          | Mormann F, Koch C (2007) Neural Correlates of Consciousness. Scholarpedia 2:1740.
-        p
-          | Pele O, Werman M (2008) A linear time histogram metric for improved sift matching. Computer Vision-ECCV 2008, 495-508. Springer Berlin Heidelberg.
-        p
-          | Pele O, Werman M (2009) Fast and robust earth mover’s distances. Computer vision, 2009 IEEE 12th international conference on, 460-467. IEEE.
-        p
-          | Shannon CE, Weaver W (1949) The mathematical theory of communication (University of Illinois press, Urbana, IL).
-        p Cover TM, Thomas JA (2006) Elements of information theory (Wiley-interscience).
-      section#figure-legends
-        h1.page-header.unnumbered Figure Legends
+        //TODO: make links
+        //TODO: link to reference pdfs?
+        h2#references References
+        ol.references
+          li.reference
+            | Le Q V. et al. (2011) Building high-level features using large scale unsupervised learning. In: ICML2012.
+          li.reference
+            | The DeepQA Research Team (2013) Available: http://researcher.ibm.com/researcher/view\_project.php?id=2099. Accessed October 21, 2013.
+          li.reference
+            | Thompson C (2010) Smarter Than You Think---I.B.M.’s Supercomputer to Challenge “Jeopardy!” Champions. N Y Times Mag.
+          li.reference
+            | Tononi G (2004) An information integration theory of consciousness. BMC Neurosci 5: 42.
+          li.reference
+            | Tononi G (2008) Consciousness as integrated information: a provisional manifesto. Biol Bull 215: 216-242.
+          li.reference
+            | Tononi G (2012) Integrated information theory of consciousness: an updated account. Arch Ital Biol 150: 56-90.
+          li.reference
+            | Baars BJ (1988) A Cognitive Theory of Consciousness (Cambridge University Press).
+          li.reference
+            | Crick F, Koch C (2003) A framework for consciousness. Nat Neurosci 6: 119-126.
+          li.reference
+            | Koch C (2004) The Quest for Consciousness: A Neurobiological Approach (Roberts and Co.).
+          li.reference
+            | Dehaene S, Changeux JP (2011) Experimental and theoretical approaches to conscious processing. Neuron 70: 200–27. Chalmers DJ (1996) The Conscious Mind: In Search of a Fundamental Theory (Oxford University Press).
+          li.reference
+            | Tononi G, Koch C (2008) The neural correlates of consciousness: an update. Ann N Y Acad Sci 1124: 239-61.
+          li.reference
+            | Tononi G, Laureys S (2009) The neurology of consciousness: an overview. The neurology of consciousness, 375-412.
+          li.reference
+            | Casali AG, Gosseries O, Rosanova M, Boly M, Sarasso S, et al. (2013) A theoretically based index of consciousness independent of sensory processing and behavior. Science translational medicine 5(198): 198ra105-198ra105.
+          li.reference
+            | Oizumi et al. (in prep)
+          li.reference
+            | Tononi G (2001) Information measures for conscious experience. Arch Ital Biol 139:367-71.
+          li.reference
+            | Balduzzi D, Tononi G (2008) Integrated information in discrete dynamical systems: Motivation and theoretical framework. PLoS Comput Biol 4: e1000091.
+          li.reference
+            | Balduzzi D, Tononi G (2009) Qualia: the geometry of integrated information. PLoS Comput Biol 5: e1000462.
+          li.reference
+            | Hoel E, Albantakis L, Tononi G (2013) Quantifying causal emergence shows that ``macro“ can beat ``micro”. Proc Natl Acad Sci: In press.
+          li.reference
+            | Ay N, Polani D (2008) Information Flows in Causal Networks. Adv Complex Syst 11:17–41.
+          li.reference
+            | Korb KB, Nyberg EP, Hope L (2011) in Causality in the Sciences (Oxford University Press, Oxford).
+          li.reference
+            | Griffith V, Koch C (2012) Quantifying synergistic mutual information. arXiv preprint arXiv:1205.4265.
+          li.reference
+            | Wilson RJ (1985) Introduction to Graph Theory, 3/e (Longman Scientific & Technical).
+          li.reference
+            | Plum F, Posner JB (1982) The Diagnosis of Stupor and Coma (Oxford University Press).
+          li.reference
+            | Tononi G, Edelman GM (1998) Consciousness and complexity. Science 282: 1846-1851.
+          li.reference
+            | Gazzaniga MS (2005) Forty-five years of split-brain research and still going strong. Nat Rev Neurosci 6:653–9.
+          li.reference
+            | Lynn S, Rhue J (1994) Dissociation: Clinical and theoretical perspectives (Guilford Press).
+          li.reference
+            | Mudrik L, Breska A, Lamy D, Deouell LY (2011) Integration without awareness: expanding the limits of unconscious processing.
+            em  Psychol Sci 
+            | 22: 764–70.
+          li.reference
+            | Mudrik, L, Faivre N, Koch S (2013) Information integration in the absence of awareness. Trends in Cognitive Sciences, in press.
+          li.reference
+            | Glickstein M (2007) What does the cerebellum really do? Curr Biol 17:R824–R827.
+          li.reference
+            | Schmahmann JD, Weilburg JB, Sherman JC (2007) The neuropsychiatry of the cerebellum---insights from the clinic. Cerebellum 6:254–67.
+          li.reference
+            | Boyd CAR (2010) Cerebellar agenesis revisited. Brain 133:941–4.
+          li.reference
+            | Cohen D (1998) Patches of synchronized activity in the cerebellar cortex evoked by mossy-fiber stimulation: Questioning the role of parallel fibers. Proc Natl Acad Sci 95:15032–15036.
+          li.reference
+            | Bower JM (2002) The Organization of Cerebellar Cortical Circuitry Revisited. Implications for Function. Ann N Y Acad Sci 978:135–155.
+          li.reference
+            | Sporns O (2010) Networks of the Brain (MIT Press).
+          li.reference
+            | van den Heuvel MP, Sporns O (2013) An anatomical substrate for integration among functional networks in human cortex. J Neurosci 33:14489–500.
+          li.reference
+            | Massimini M et al. (2005) Breakdown of cortical effective connectivity during sleep. Science 309:2228–32.
+          li.reference
+            | 1. Ferrarelli F et al. (2010) Breakdown in cortical effective connectivity during midazolam-induced loss of consciousness. Proc Natl Acad Sci U S A 107:2681–6.
+          li.reference
+            | Sanes DH, Reh TA, Harris WA (2011) Development of the Nervous System (Academic Press).
+          li.reference
+            | Sullivan PR (1995) Contentless Consciousness and Information-Processing Theories of Mind. Philos Psychiatry, Psychol 2:51–59.
+          li.reference
+            | Edelman GM (1989) The Remembered Present: A Biological Theory of Consciousness (Basic Books).
+          li.reference
+            | Harth E (1993) The creative loop: How the brain makes a mind (Addison-Wesley, Reading, MA).
+          li.reference
+            | Hofstadter DR (2007) I Am a Strange Loop (Basic Books).
+          li.reference
+            | Lamme VAF (2003) Why visual attention and awareness are different. Trends Cogn Sci 7:12–18.
+          li.reference
+            | Imas OA, Ropella KM, Ward BD, Wood JD, Hudetz AG (2005) Volatile anesthetics disrupt frontal-posterior recurrent information transfer at gamma frequencies in rat. Neurosci Lett 387:145–150.
+          li.reference
+            | Boly M et al. (2012) Connectivity changes underlying spectral EEG changes during propofol-induced loss of consciousness. J Neurosci 32:7082–90.
+          li.reference
+            | Mashour GA (2013) Cognitive unbinding: A neuroscientific paradigm of general anesthesia and related states of unconsciousness. Neurosci Biobehav Rev.
+          li.reference
+            | Koch C, Crick F (2001) The zombie within. Nature 411: 893.
+          li.reference
+            | Boly M et al. (2011) Preserved feedforward but impaired top-down processes in the vegetative state. Science 332:858–62.
+          li.reference
+            | Cybenko G (1989) Approximation by superpositions of a sigmoidal function. Math Control Signals Syst 2: 303-314.
+          li.reference
+            | Hornik K, Stinchcombe M, White H (1989) Multilayer feedforward networks are universal approximators. Neural Networks 2: 359-366.
+          li.reference
+            | Rumelhart D, Hinton G, Williams R (1986) Learning internal representations by error propagation, Parallel distributed processing, 1986. Cambridge, MA.
+          li.reference
+            | Goldman M (2009) Memory without feedback in a neural network. Neuron 61: 499–501.
+          li.reference
+            | Dalal N, Triggs B (2005) in 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR’05) (IEEE), pp 886–893.
+          li.reference
+            | Serre T, Wolf L, Bileschi S, Riesenhuber M, Poggio T (2007) Robust object recognition with cortex-like mechanisms. IEEE Trans Pattern Anal Mach Intell 29:411–26.
+          li.reference
+            | Sung K-K, Poggio T (1998) Example-based learning for view-based human face detection. IEEE Trans Pattern Anal Mach Intell 20:39–51.
+          li.reference
+            | Zhao W, Chellappa R, Phillips PJ, Rosenfeld A (2003) Face recognition. ACM Comput Surv 35:399–458.
+          li.reference
+            | Poggio T, Ullman S (2013) Vision: are models of object recognition catching up with the brain? Ann N Y Acad Sci.
+          li.reference
+            | Crick F, Koch C (1995) Are we aware of neural activity in primary visual cortex? Nature 375: 121–123.
+          li.reference
+            | Blake R, Logothetis NK (2002) Visual competition. Nat Rev Neurosci 3: 13–21.
+          li.reference
+            | Tong F (2003) Primary visual cortex and visual awareness. Nat Rev Neurosci 4:219–29.
+          li.reference
+            | Pollen DA (2008) Fundamental requirements for primary visual perception. Cereb Cortex 18:1991–8.
+          li.reference
+            | Tononi G, Sporns O, Edelman GM (1996) A complexity measure for selective matching of signals by the brain. Proc Natl Acad Sci U S A 93:3422–3427.
+          li.reference
+            | Friston K, Kiebel S (2009) Predictive coding under the free-energy principle. Philos Trans R Soc Lond B Biol Sci 364:1211–21.
+          li.reference
+            | Friston K (2010) The free-energy principle: a unified brain theory? Nat Rev Neurosci 11:127–38.
+          li.reference
+            | Barrett AB, Seth AK (2011) Practical measures of integrated information for time-series data. PLoS Comput Biol 7:e1001052.
+          li.reference
+            | Hashmi A, Nere A, Tononi G (2013) Sleep-Dependent Synaptic Down-Selection (II): Single-Neuron Level Benefits for Matching, Selectivity, and Specificity. Front Neurol 4:148.
+          li.reference
+            | Albantakis L, Hintze A, Koch, C, Adami C, Tononi G (2013) Information Matching---Environment dependent increase in integrated information (<span class="math">\(\Phi\)</span>). European Conference on Complex Systems (ECCS13).
+          li.reference
+            | Edlund J a et al. (2011) Integrated information increases with fitness in the evolution of animats. PLoS Comput Biol 7:e1002236.
+          li.reference
+            | Joshi NJ, Tononi G, Koch C (2013) The minimal complexity of adapting agents increases with fitness. PLoS Comput Biol 9:e1003111.
+          li.reference
+            | https://github.com/Albantakis/iit/tree/IIT-3.0-Program
+          li.reference
+            | Mormann F, Koch C (2007) Neural Correlates of Consciousness. Scholarpedia 2:1740.
+          li.reference
+            | Pele O, Werman M (2008) A linear time histogram metric for improved sift matching. Computer Vision-ECCV 2008, 495-508. Springer Berlin Heidelberg.
+          li.reference
+            | Pele O, Werman M (2009) Fast and robust earth mover’s distances. Computer vision, 2009 IEEE 12th international conference on, 460-467. IEEE.
+          li.reference
+            | Shannon CE, Weaver W (1949) The mathematical theory of communication (University of Illinois press, Urbana, IL).
+          li.reference
+            | Cover TM, Thomas JA (2006) Elements of information theory (Wiley-interscience).
+        section#figure-legends
+          h1.page-header.unnumbered Figure Legends
