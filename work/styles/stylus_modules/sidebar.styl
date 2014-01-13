@@ -1,16 +1,15 @@
-
 .iit-sidebar
+  font-size 90%
   text-align left
   &.affix
-    position static
-    position fixed
     top 70px
   .nav
     & > li
       & > a
         display block
         color sol_secondary
-        padding 5px 20px
+        padding 7px 20px
+        border-right 3px solid sol_highlight
     .nav
       display none
       margin-bottom 8px
@@ -20,10 +19,9 @@
           padding-bottom 3px
           padding-left 30px
           font-size 80%
-      .nav
-        & > li
-          & > a
-            font-size 60%
+      .nav > li > a
+            padding-left 50px
+            font-size 70%
   &.affix-bottom
     position absolute
 
@@ -50,15 +48,22 @@
   background-color transparent
   border-right 3px solid sol_secondary
 
+// xs, sm
+unquote("@media (max-width: "+sm_max+") {")
+.iit-sidebar.affix, .iit-sidebar.affix-bottom
+  position static
+unquote("}")
+
 // md, lg
 unquote("@media (min-width: "+md_min+") {")
 .iit-sidebar .nav > .active > ul
   display block
 
 .iit-sidebar.affix, .iit-sidebar.affix-bottom
+  position fixed
   width 213px
 
-.iit-sidebar.affix-bottom .bs-sidenav, .iit-sidebar.affix .bs-sidenav
+.iit-sidebar.affix-bottom .iit-sidenav, .iit-sidebar.affix .iit-sidenav
   margin-top 0
   margin-bottom 0
 unquote("}")
