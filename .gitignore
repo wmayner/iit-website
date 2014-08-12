@@ -22,3 +22,4 @@ aws-credentials.json
 contents/paper.html
 contents/paper.jade
 
+.agignore
