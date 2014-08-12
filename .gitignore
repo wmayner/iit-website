@@ -26,3 +26,4 @@ contents/paper.jade
 node_modules
 contents/css/main.css
 contents/js/main.min.js
+*.tex
