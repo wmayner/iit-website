@@ -41,7 +41,8 @@ html(lang='en')
             block footer
               section.copy
                 .wrap
-                  p &copy; #{ new Date().getFullYear() } #{ locals.owner }&nbsp;&nbsp;&middot;&nbsp;&nbsp;Updated 11/16/13
+                  - var d = new Date();
+                  p Copyright &copy; #{d.getFullYear()} #{locals.owner}&nbsp;&nbsp;&middot;&nbsp;&nbsp;Updated #{d.getMonth()}/#{d.getDate()}/#{d.getFullYear()}
     // jQuery
     script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
     // Bootstrap JS
