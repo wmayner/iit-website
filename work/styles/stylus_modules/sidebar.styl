@@ -1,0 +1,75 @@
+.iit-sidebar
+  font-size 90%
+  text-align left
+  &.affix
+    top 70px
+  .nav
+    & > li
+      & > a
+        display block
+        color sol_secondary
+        padding 7px 20px
+        border-right 3px solid sol_highlight
+    .nav
+      display none
+      margin-bottom 8px
+      & > li
+        & > a
+          padding-top 3px
+          padding-bottom 3px
+          padding-left 30px
+          font-size 80%
+      .nav > li > a
+            padding-left 50px
+            font-size 70%
+  &.affix-bottom
+    position absolute
+
+.iit-sidenav
+  margin-top 10px
+  margin-bottom 10px
+  padding-top 10px
+  padding-bottom 10px
+  text-shadow 0 1px 0 #fff
+  background-color sol_highlight
+  border-radius 5px
+
+.iit-sidebar .nav > li > a:hover,
+.iit-sidebar .nav > li > a:focus
+  text-decoration none
+  background-color darken(sol_highlight, 3%)
+  border-right 3px solid sol_secondary
+
+.iit-sidebar .nav > .active > a,
+.iit-sidebar .nav > .active:hover > a,
+.iit-sidebar .nav > .active:focus > a
+  font-weight 400
+  color sol_primary
+  background-color transparent
+  border-right 3px solid sol_secondary
+
+// xs, sm
+unquote("@media (max-width: "+sm_max+") {")
+.iit-sidebar.affix, .iit-sidebar.affix-bottom
+  position static
+unquote("}")
+
+// md, lg
+unquote("@media (min-width: "+md_min+") {")
+.iit-sidebar .nav > .active > ul
+  display block
+
+.iit-sidebar.affix, .iit-sidebar.affix-bottom
+  position fixed
+  width 213px
+
+.iit-sidebar.affix-bottom .iit-sidenav, .iit-sidebar.affix .iit-sidenav
+  margin-top 0
+  margin-bottom 0
+unquote("}")
+
+unquote("@media (min-width: "+lg_min+") {")
+.iit-sidebar.affix-bottom, .iit-sidebar.affix
+  width 263px
+unquote("}")
+

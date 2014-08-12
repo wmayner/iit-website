@@ -1,3 +1,5 @@
+// Base styles
+
 body
   font-family base_font
   font-weight 300
@@ -6,21 +8,28 @@ body
   font-size base_font_size
   text-align justify
 
+p
+  margin-bottom 15px
+
 u
   text-decoration underline
 
 strong
   font-weight 400
 
-ul
-  li
-    margin-bottom .5ex
-  ul>li
-    margin-bottom 0
-  text-align left
-  padding-left 1.5em
+.footnote
+  font-size 80%
+
+.math-font
+  font-family 'Open Sans'
+  font-size 100%
+  padding 0 5px
+  font-weight 100
 
 // Headers
+
+.title
+  font-size 150%
 
 h1, h2, h3, h4, h5, h6
   font-family base_font
@@ -33,19 +42,31 @@ h1, h2, h3, h4, h5, h6
 
 h1
   font-weight 400
-  font-size 125%
+  font-size 140%
 
 h2
   font-weight 400
+  font-size 120%
+
+h3
+  font-weight 400
   font-size 110%
 
-h3, h4, h5, h6
+h4
+  font-weight 400
   font-size 100%
 
 .page-header
   line-height 1.5
-  border-bottom 1px solid sol_highlight
+  border-bottom 1px solid darken(sol_highlight, 5%)
 
+// Lists
+
+dl
+  >dt
+    font-weight 400
+  >dd
+    margin-bottom 10px
 
 // Code
 
@@ -59,9 +80,14 @@ pre, code, pre.prettyprint, code.prettyprint
 a
   color link_color
   &:hover
+    color link_color
     text-decoration underline
 
 a.prompt
+  color inherit
+  &:hover
+    color link_color
+    text-decoration none
   &:after
     content "»"
     color link_color
@@ -82,11 +108,20 @@ a.prompt
     font-size 60%
     font-weight 300
 
+// References
+
+ol.references
+  text-align left
+  >li
+    margin-bottom 20px
+    margin-top 20px
 
 // xs, sm
 unquote("@media (max-width: "+sm_max+") {")
 h1.page-header
   margin hOne_top_margin 0 10px 0
+p 
+  margin-bottom 10px
 unquote("}")
 
 // xs
