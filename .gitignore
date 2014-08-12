@@ -24,3 +24,5 @@ contents/paper.jade
 
 .agignore
 node_modules
+contents/css/main.css
+contents/js/main.min.js
