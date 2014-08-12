@@ -23,3 +23,4 @@ contents/paper.html
 contents/paper.jade
 
 .agignore
+node_modules
