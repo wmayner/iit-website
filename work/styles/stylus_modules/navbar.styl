@@ -1,31 +1,40 @@
 .navbar-inverse
   border none
   color sol_secondary
+.navbar
   .navbar-brand
     font-family display_font
     font-size 120%
     letter-spacing 0.25ex
     color sol_background
-  .navbar-nav>li>a
-    color inherit
-    &:hover
-      color lighten(sol_secondary, 50%)
-  .navbar-nav>li>a.active
-    background-color darken(navbar_background, 80%)
-    color lighten(sol_secondary, 50%)
+  ul.navbar-nav
+    >li
+      >a
+        color inherit
+        &:hover
+          color lighten(sol_secondary, 50%)
+      >a.active
+        background-color darken(navbar_background, 80%)
+        color lighten(sol_secondary, 50%)
 
 // xs
 unquote("@media (max-width: "+xs_max+") {")
 .navbar-inverse
-  .navbar-nav>li>a:hover, .navbar-nav>li>a.active
-    padding-left 10px
-    border-left 5px solid cyan
+  ul.navbar-nav
+    margin-top 1px
+    margin-bottom 1px
+    >li>a
+      &:hover, &.active
+        padding-left 10px
+        border-left 5px solid cyan
 unquote("}")
 
 // sm, md, lg
 unquote("@media (min-width: "+sm_min+") {")
 .navbar-inverse
-  .navbar-nav>li>a:hover, .navbar-nav>li>a.active
-    padding-bottom 10px
-    border-bottom 5px solid cyan
+  ul.navbar-nav
+    >li>a
+      &:hover, &.active
+        padding-bottom 10px
+        border-bottom 5px solid cyan
 unquote("}")
