@@ -33,6 +33,7 @@ strong
 
 h1, h2, h3, h4, h5, h6
   font-family base_font
+  font-weight 400
   a
     color sol_primary
     &:hover
@@ -41,38 +42,77 @@ h1, h2, h3, h4, h5, h6
   text-align left
 
 h1
-  font-weight 400
-  font-size 140%
+  font-size 150%
 
 h2
-  font-weight 400
   font-size 120%
 
 h3
-  font-weight 400
   font-size 110%
 
 h4
-  font-weight 400
   font-size 100%
 
 .page-header
-  line-height 1.5
+  line-height 1.25
   border-bottom 1px solid darken(sol_highlight, 5%)
 
 // Lists
 
+.pub-list
+  margin-top 15px
+  text-align left
+  .pub-item
+    margin-bottom 15px
+    line-height 1.7
+    .label
+      margin-right 1.5ex
+
+ul
+  text-align left
+  padding-left 1.5em
+
 dl
-  >dt
+  dt
     font-weight 400
-  >dd
-    margin-bottom 10px
+
+.block-ul
+  padding 10px 0
+.block-li
+  text-shadow 0 1px white
+  margin 0 25px 25px 0
+  display inline-block
+  padding 10px 10px
+  vertical-align baseline
+  font-size 100%
+  >.block-li-label
+    padding 5px
+    display inline
+    color sol_secondary
+    font-weight 300
+  >.item
+    padding 5px
+    margin-left 0.5ex
+    display inline
+    font-weight normal
+    color darken(sol_secondary, 8)
+  &[href]:hover
+    text-shadow none
+    background-color link_color
+    color sol_background
+    >.block-li-label
+      color lighten(link_color, 50)
+    >.item
+      color sol_background
 
 // Code
 
 pre, code, pre.prettyprint, code.prettyprint
   font-family mono_font
   background-color sol_highlight
+
+code
+  padding 3px 9px
 
 
 // Links
@@ -91,10 +131,7 @@ a.prompt
   &:after
     content "»"
     color link_color
-    padding 0 0 0 .5ex 
-
-.label-info[href]:hover
-  background-color link_color
+    padding 0 0 0 .5ex
 
 // Dates
 
@@ -120,7 +157,7 @@ ol.references
 unquote("@media (max-width: "+sm_max+") {")
 h1.page-header
   margin hOne_top_margin 0 10px 0
-p 
+p
   margin-bottom 10px
 unquote("}")
 
