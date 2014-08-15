@@ -1,12 +1,22 @@
 .footer
-  margin-top 75px
-  .copy
-    color sol_secondary
-    font-size 60%
-    text-align center
+  padding 10px 0
+  color sol_secondary
+  font-size 60%
+  text-align center
+  .copyright
+    margin auto
 
-// xs
-unquote("@media (max-width: "+xs_max+") {")
+// Sticky footer
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~
+footer_height = 40px
+html
+  position relative
+  min-height 100%
+body
+  margin-bottom footer_height
 .footer
-  margin-top 40px
-unquote("}")
+  position absolute
+  bottom 0
+  width 100%
+  height footer_height
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~
