@@ -1,11 +1,10 @@
 module.exports = {
     credentials: "../aws-credentials.json",
-    bucketName: "staging.willmayner.com",
+    bucketName: "staging.integratedinformationtheory.org",
     patterns: [
         "*.html"
       , "img/**/*.png"
       , "css/**/*.css"
-      , "applets/**/*"
       , "download/*"
     ]
 }
