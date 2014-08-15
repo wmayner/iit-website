@@ -5,6 +5,7 @@ module.exports = {
         "*.html"
       , "img/**/*.png"
       , "css/**/*.css"
+      , "js/**/*.js"
       , "download/*"
     ]
 }

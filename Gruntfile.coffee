@@ -81,7 +81,8 @@ module.exports = (grunt) ->
         tagMessage: "Version %VERSION%"
         push: false
         pushTo: "origin"
-        gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d" # options to use with '$ git describe'
+        # options to use with '$ git describe'
+        gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d"
 
     shell:
       s3upload:
@@ -217,7 +218,6 @@ module.exports = (grunt) ->
     "shell:githubDeploy"
   ]
   grunt.registerTask "deployProduction", [
-    "deployGithub"
     "buildProduction"
     "shell:s3upload"
   ]
