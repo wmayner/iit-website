@@ -2,19 +2,20 @@
   font-size 90%
   text-align left
   &.affix
-    top 70px
+    top 80px
   .nav
-    & > li
-      & > a
+    > li
+      padding 0
+      > a
         display block
         color sol_secondary
         padding 7px 20px
-        border-right 3px solid sol_highlight
+        border-left 3px solid sol_highlight
     .nav
       display none
       margin-bottom 8px
-      & > li
-        & > a
+      > li
+        > a
           padding-top 3px
           padding-bottom 3px
           padding-left 30px
@@ -38,7 +39,7 @@
 .iit-sidebar .nav > li > a:focus
   text-decoration none
   background-color darken(sol_highlight, 3%)
-  border-right 3px solid sol_secondary
+  border-left 3px solid sol_secondary
 
 .iit-sidebar .nav > .active > a,
 .iit-sidebar .nav > .active:hover > a,
@@ -46,7 +47,7 @@
   font-weight 400
   color sol_primary
   background-color transparent
-  border-right 3px solid sol_secondary
+  border-left 3px solid sol_secondary
 
 // xs, sm
 unquote("@media (max-width: "+sm_max+") {")
