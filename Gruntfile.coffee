@@ -15,7 +15,7 @@ module.exports = (grunt) ->
       deploy:
         config: 'aws-upload-staging.conf.js'
       wintersmith:
-        config: 'config-staging.json'
+        config: 'config-preview.json'
 
     clean:
       build: ["build"]
