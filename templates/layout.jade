@@ -38,10 +38,9 @@ html(lang='en')
           ul.nav.navbar-nav.navbar-right
             li
               a(href="http://tononi.psychiatry.wisc.edu") Center for Sleep and Consciousness
-    .container#content
-      .wrap
-        != typogr(page.html).typogrify()
-        block content
+    #content
+      != typogr(page.html).typogrify()
+      block content
     .footer
       .container-fluid
         - var d = new Date();
