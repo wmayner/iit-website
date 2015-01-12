@@ -2,104 +2,102 @@
 template: layout.jade
 ---
 
-.iit-header
-  .jumbotron
-    .logo
-      img(src='/img/logo.png', alt="Greek letter Phi (symbol for integrated information)")
-    .title
-      p.hidden-xs Resources for learning about
-      h1 Integrated Information Theory
-.row
-  .col-sm-12
-    p#lead
-      | Integrated information theory (IIT) is a theoretical framework for
-      | understanding consciousness developed by Giulio Tononi, MD, PhD, at
-      | the 
-      a(href="http://tononi.psychiatry.wisc.edu/index.php", target="_blank") Center for Sleep and Consciousness
-      |  at the University of Wisconsin–Madison.
-.row
-  .col-sm-12
-    #papers
-      h1.page-header Selected publications
-      .pub-list
-        .pub-item 
-          .label.label-info 2014
-          a(href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003588", target="_blank") Integrated Information Theory 3.0
-        .pub-item 
-          .label.label-info 2014
-          a(href="http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003966", target="_blank") Evolution of Integrated Causal Structures in Animats Exposed to Environments of Increasing Complexity
-        .pub-item 
-          .label.label-info 2014
-          a(href="http://arxiv.org/abs/1405.7089", target="_blank") Consciousness: Here, There but Not Everywhere
-        .pub-item 
-          .label.label-info 2014
-          a(href="http://www.scholarpedia.org/article/Integrated_information_theory", target="_blank") Scholarpedia Article
-        .pub-item
-          .label.label-info 2012
-          a(href="http://www.architalbiol.org/aib/article/view/15056", target="_blank") The Integrated Information Theory of Consciousness: An Updated Account
-      .block-ul.hidden
-        a.block-li.label.label-info(href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003588", target="_blank")
-          .block-li-label 2014
-          .item Integrated Information Theory 3.0
-        a.block-li.label.label-info(href="http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003966", target="_blank")
-          .block-li-label 2014
-          .item Evolution of Integrated Causal Structures in Animats Exposed to Environments of Increasing Complexity
-        a.block-li.label.label-info(href="http://arxiv.org/abs/1405.7089", target="_blank")
-          .block-li-label 2014
-          .item Consciousness: Here, There but Not Everywhere
-        a.block-li.label.label-info(href="http://www.scholarpedia.org/article/Integrated_information_theory", target="_blank")
-          .block-li-label 2014
-          .item Scholarpedia Article
-        a.block-li.label.label-info(href="http://www.architalbiol.org/aib/article/view/15056", target="_blank")
-          .block-li-label 2012
-          .item The Integrated Information Theory of Consciousness: An Updated Account
-.row
-  .col-sm-12
-    #software
-      h1.page-header
-        a.prompt(href="http://github.com/wmayner/pyphi", target="_blank") Software
-        .github-buttons
-          .wrap
-            .hidden-xs
-              iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&size=large&type=watch",
-                allowtransparency="true", frameborder="0", scrolling="0",
-                width="75", height="30", style="width:75px;height:30px;")
-              iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&size=large&type=fork",
-                allowtransparency="true", frameborder="0", scrolling="0",
-                width="75", height="30", style="width:75px;height:30px;")
-            .visible-xs
-              iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&type=watch",
-                allowtransparency="true", frameborder="0", scrolling="0",
-                width="50", height="20", style="width:50px;height:20px;")
-              iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&type=fork",
-              allowtransparency="true", frameborder="0", scrolling="0",
-              width="50", height="20", style="width:50px;height:20px;")
-      :markdown
-        [**PyPhi**](http://github.com/wmayner/pyphi) is a Python library for
-        calculating integrated information (denoted Φ) and its associated
-        quantities and structures. It is open-source and [available on
-        GitHub](http://github.com/wmayner/pyphi).
-       
-        Please consult the the repository's
-        [README](https://github.com/wmayner/pyphi/blob/develop/README.rst)
-        for more information.
-      h2
-        a.prompt(href="http://wmayner.github.io/pyphi", target="_blank") Documentation
-      :markdown
-        [Online documentation](http://wmayner.github.io/pyphi) is available.
-        There is a simple
-        [example](http://wmayner.github.io/pyphi/#usage-and-examples) that
-        demonstrates how to create a network and measure its Φ, as well as
-        comprehensive documentation of the full API.
+.container
+  .wrap
+    .iit-header
+      .jumbotron
+        .logo
+          img(src='/img/logo.png', alt="Greek letter Phi (symbol for integrated information)")
+        .title
+          p.hidden-xs Resources for learning about
+          h1 Integrated Information Theory
+    .row
+      .col-sm-12
+        p#lead
+          | Integrated information theory (IIT) is a theoretical framework for
+          | understanding consciousness developed by Giulio Tononi, MD, PhD, at
+          | the 
+          a(href="http://tononi.psychiatry.wisc.edu/index.php", target="_blank") Center for Sleep and Consciousness
+          |  at the University of Wisconsin–Madison.
+    .row
+      .col-sm-12
+        #papers
+          h1.page-header Selected publications
+          ul.pub-list
+            //- TODO: Hide these when masonry is implemented
+            li.pub-item 
+              a(href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003588", target="_blank") Integrated Information Theory 3.0
+            li.pub-item 
+              a(href="http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003966", target="_blank") Evolution of Integrated Causal Structures in Animats Exposed to Environments of Increasing Complexity
+            li.pub-item 
+              a(href="http://arxiv.org/abs/1405.7089", target="_blank") Consciousness: Here, There but Not Everywhere
+            li.pub-item 
+              a(href="http://www.scholarpedia.org/article/Integrated_information_theory", target="_blank") Scholarpedia Article
+            li.pub-item
+              a(href="http://www.architalbiol.org/aib/article/view/15056", target="_blank") The Integrated Information Theory of Consciousness: An Updated Account
+          .block-ul.hidden
+            a.block-li.label.label-info(href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003588", target="_blank")
+              .block-li-label 2014
+              .item Integrated Information Theory 3.0
+            a.block-li.label.label-info(href="http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003966", target="_blank")
+              .block-li-label 2014
+              .item Evolution of Integrated Causal Structures in Animats Exposed to Environments of Increasing Complexity
+            a.block-li.label.label-info(href="http://arxiv.org/abs/1405.7089", target="_blank")
+              .block-li-label 2014
+              .item Consciousness: Here, There but Not Everywhere
+            a.block-li.label.label-info(href="http://www.scholarpedia.org/article/Integrated_information_theory", target="_blank")
+              .block-li-label 2014
+              .item Scholarpedia Article
+            a.block-li.label.label-info(href="http://www.architalbiol.org/aib/article/view/15056", target="_blank")
+              .block-li-label 2012
+              .item The Integrated Information Theory of Consciousness: An Updated Account
+    .row
+      .col-sm-12
+        #software
+          h1.page-header
+            a.prompt(href="http://github.com/wmayner/pyphi", target="_blank") Software
+            .github-buttons
+              .wrap
+                .hidden-xs
+                  iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&size=large&type=watch",
+                    allowtransparency="true", frameborder="0", scrolling="0",
+                    width="75", height="30", style="width:75px;height:30px;")
+                  iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&size=large&type=fork",
+                    allowtransparency="true", frameborder="0", scrolling="0",
+                    width="75", height="30", style="width:75px;height:30px;")
+                .visible-xs
+                  iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&type=watch",
+                    allowtransparency="true", frameborder="0", scrolling="0",
+                    width="50", height="20", style="width:50px;height:20px;")
+                  iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&type=fork",
+                  allowtransparency="true", frameborder="0", scrolling="0",
+                  width="50", height="20", style="width:50px;height:20px;")
+          :markdown
+            [**PyPhi**](http://github.com/wmayner/pyphi) is a Python library for
+            calculating integrated information (denoted Φ) and its associated
+            quantities and structures. It is open-source and [available on
+            GitHub](http://github.com/wmayner/pyphi).
+           
+            Please consult the the repository's
+            [README](https://github.com/wmayner/pyphi/blob/develop/README.rst)
+            for more information.
+          h2
+            a.prompt(href="http://wmayner.github.io/pyphi", target="_blank") Documentation
+          :markdown
+            [Online documentation](http://wmayner.github.io/pyphi) is available.
+            There is a simple
+            [example](http://wmayner.github.io/pyphi/#usage-and-examples) that
+            demonstrates how to create a network and measure its Φ, as well as
+            comprehensive documentation of the full API.
 
-        In addition, the source code itself is commented. Those familiar with
-        Python are encouraged to read the code to better understand the details
-        of the calculation.
-      
-      .alert.alert-info This website will soon feature a visual interface to the program that will not require knowledge of Python.
-.row
-  .col-sm-12
-    h1.page-header Other
-    ul
-      li
-        a(href="/download/conscious_grid.pdf", target="_blank") The Conscious Grid
+            In addition, the source code itself is commented. Those familiar with
+            Python are encouraged to read the code to better understand the details
+            of the calculation.
+          
+          .alert.alert-info This website will soon feature a visual interface to the program that will not require knowledge of Python.
+    .row
+      .col-sm-12
+        h1.page-header Other
+        ul
+          li
+            a(href="/download/conscious_grid.pdf", target="_blank") The Conscious Grid
