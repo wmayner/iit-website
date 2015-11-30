@@ -19,9 +19,6 @@ docs
 build
 aws-credentials.json
 
-contents/paper.html
-contents/paper.jade
-
 .agignore
 node_modules
 contents/css/main.css
