@@ -21,14 +21,19 @@
 
 // xs
 unquote("@media (max-width: "+xs_max+") {")
+
+navlink_xs_left_right_padding = 15px
+navlink_hover_highlight-width = 5px
+
 .navbar-inverse
   ul.navbar-nav
     margin-top 1px
     margin-bottom 1px
     >li>a
+      padding-left navlink_xs_left_right_padding
       &:hover, &.active
-        padding-left 10px
-        border-left 5px solid cyan
+        padding-left navlink_xs_left_right_padding - navlink_hover_highlight-width
+        border-left navlink_hover_highlight-width solid cyan
 unquote("}")
 
 // sm, md, lg
