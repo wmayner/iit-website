@@ -156,6 +156,32 @@ a.prompt
     font-size 60%
     font-weight 300
 
+// Tables
+
+// phone
+unquote("@media (max-width: "+phone_max+") {")
+.table
+  font-size 85%
+unquote("}")
+
+.table
+  margin 0 auto
+  width 100%
+  text-align left
+  margin-top 30px
+
+.table>caption+thead>tr:first-child>th,
+.table>colgroup+thead>tr:first-child>th,
+.table>thead:first-child>tr:first-child>th,
+.table>caption+thead>tr:first-child>td,
+.table>colgroup+thead>tr:first-child>td,
+.table>thead:first-child>tr:first-child>td
+  border-top 1px solid #ddd
+
+.table-responsive
+  border none
+
+
 // References
 
 ol.references
@@ -190,3 +216,4 @@ strong
 p.lead
   font-weight inherit
 unquote("}")
+
