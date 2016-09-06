@@ -7,5 +7,6 @@ module.exports = {
       , "css/**/*.css"
       , "js/**/*.js"
       , "download/*"
+      , "publications/*"
     ]
 }
