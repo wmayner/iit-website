@@ -4,6 +4,26 @@ template: layout.jade
 
 .row
   .col-sm-12
+    section#papers
+      h1.page-header Overview
+      ul.pub-list
+        li.pub-item 
+          a(href="http://www.nature.com/nrn/journal/v17/n7/full/nrn.2016.44.html", target="_blank") Integrated information theory: from consciousness to its physical substrate
+          br
+          em Nature Reviews Neuroscience
+          |  (2016)
+        li.pub-item 
+          a(href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003588", target="_blank") From the phenomenology to the mechanisms of consciousness: integrated information theory 3.0
+          br
+          em PLoS Computational Biology
+          |  (2014)
+        li.pub-item 
+          a(href="http://www.scholarpedia.org/article/Integrated_information_theory", target="_blank") Integrated information theory
+          br
+          em Scholarpedia
+          |  (2014)
+.row
+  .col-sm-12
     section#announcements
       h1.page-header Announcements
       .alert.alert-info.alert-banner(role='alert')
@@ -57,69 +77,4 @@ template: layout.jade
       //-     | ).
 .row
   .col-sm-12
-    section#software
-      h1.page-header
-        a.prompt(href="http://github.com/wmayner/pyphi", target="_blank") Software
-        .github-buttons
-          .wrap
-            .hidden-xs
-              iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&size=large&type=watch",
-                allowtransparency="true", frameborder="0", scrolling="0",
-                width="75", height="30", style="width:75px;height:30px;")
-              iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&size=large&type=fork",
-                allowtransparency="true", frameborder="0", scrolling="0",
-                width="75", height="30", style="width:75px;height:30px;")
-            .visible-xs
-              iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&type=watch",
-                allowtransparency="true", frameborder="0", scrolling="0",
-                width="50", height="20", style="width:50px;height:20px;")
-              iframe(src="http://ghbtns.com/github-btn.html?user=wmayner&repo=pyphi&type=fork",
-              allowtransparency="true", frameborder="0", scrolling="0",
-              width="50", height="20", style="width:50px;height:20px;")
-      :markdown
-        [**PyPhi**](http://github.com/wmayner/pyphi) is a Python library for
-        calculating integrated information (denoted &Phi;) and its associated
-        quantities and structures. It is open-source and [available on
-        GitHub](http://github.com/wmayner/pyphi).
-       
-        Please consult the the project's
-        [README](https://github.com/wmayner/pyphi/blob/develop/README.rst)
-        for more information.
-      h2
-        a.prompt(href="/calculate.html", target="_blank") Visual Interface
-      p
-        | There is a 
-        a(href="/calculate.html") visual interface 
-        |  to this code available on this website via the “Calculate &Phi;” tab above.
-      h2
-        a.prompt(href="http://pyphi.readthedocs.io/en/stable/", target="_blank") Documentation
-      :markdown
-        [Online documentation](http://pyphi.readthedocs.io/en/stable/) is available.
-        There are some
-        [examples](http://pyphi.readthedocs.io/en/stable/examples/index.html)
-        that demonstrate how to create a network and measure its &Phi;, and
-        comprehensive documentation of the API.
-
-        In addition, the figures in the IIT 3.0 paper are illustrated with
-        PyPhi as an [IPython
-        notebook](http://integratedinformationtheory.org/download/IIT%203.0%20-%20A%20PyPhi%20companion%20-%20v1.0.0.ipynb)
-        and in the [online
-        documentation](http://pyphi.readthedocs.io/en/stable/examples/2014paper.html).
-        This section is meant to serve as a companion to the paper, and
-        readers are encouraged to follow along and analyze the systems
-        shown in the figures, hopefully becoming more familiar with both
-        the theory and the software in the process.
-
-        Finally, the source code itself is commented. Those familiar with
-        Python are encouraged to read the code to better understand the details
-        of the calculation.
-.row
-  .col-sm-12
-    section#other
-      h1.page-header Other
-      ul
-        li
-          a(href="/download/conscious_grid.pdf", target="_blank") The Conscious Grid
-        li
-          a(href="http://integratedinformationtheory.org/download/IIT%203.0%20-%20A%20PyPhi%20companion%20-%20v1.0.0.ipynb")
-            | IPython notebook illustrating the figures of the IIT 3.0 paper
+    include software-description.jade
