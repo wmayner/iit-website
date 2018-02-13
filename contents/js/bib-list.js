@@ -2497,6 +2497,7 @@ var bibtexify = (function($) {
             .replace(/\{/g, '')
             .replace(/\}/g, '')
             .replace(/\\&/g, '&')
+            .replace(/---/g, '&mdash;')
             .replace(/--/g, '&ndash;');
         return str;
     };
