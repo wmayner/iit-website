@@ -2518,6 +2518,7 @@ var bibtexify = (function($) {
             .replace(/\{/g, '')
             .replace(/\}/g, '')
             .replace(/\\&/g, '%26')
+            .replace(/---/g, '%E2%80%94')
             .replace(/--/g, '%E2%80%93');
         return str;
     };
