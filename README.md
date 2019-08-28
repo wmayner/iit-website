@@ -1,6 +1,6 @@
 # iit-website
 
-[integratedinformationtheory.org](integratedinformationtheory.org)
+[integratedinformationtheory.org](http://integratedinformationtheory.org)
 
 ## Run locally
 
