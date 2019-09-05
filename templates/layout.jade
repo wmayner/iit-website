@@ -35,27 +35,18 @@ html(lang='en')
             li
               a(href="/calculate.html") Calculate&nbsp;&nbsp;<span class="math-font">&Phi;</span>
             li
+              a(href="/actual-causation/theory.html") Causation
+            li
               a(href="/animats.html") Animats
-            li.visible-lg.visible-md.visible-xs
-              a(href="/publications.html") Selected Publications
-            li.visible-sm
+            li.visible-lg.visible-md
               a(href="/publications.html") Publications
-            li.visible-lg.visible-md.visible-xs
+            li.visible-lg.visible-md
               a(href="/software.html") Software
           ul.nav.navbar-nav.navbar-right
-            li
+            li.visible-lg
               a(href="http://centerforsleepandconsciousness.med.wisc.edu/") CSC
-            li
+            li.visible-lg
               a(href="https://sleepandconsciousness.wiscweb.wisc.edu", target="_blank") WISC
-    .container
-      .wrap
-        .iit-header
-          .jumbotron
-            .logo
-              img(src='/img/logo.png', alt="Greek letter Phi (symbol for integrated information)")
-            .title
-              p.hidden-xs Resources for exploring
-              h1 Integrated Information Theory
     .container#content
       != typogr(page.html).typogrify()
       block content

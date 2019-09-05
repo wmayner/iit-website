@@ -2,6 +2,7 @@
 template: layout.jade
 ---
 
+include iit-header.jade
 .row
   .col-sm-12
     a(href="http://www.mdpi.com/journal/entropy/special_issues/integrated", target="_blank")
@@ -10,7 +11,7 @@ template: layout.jade
   .col-sm-12
     h1.first.page-header Selected Publications
     noscript
-      // bibtex source hidden by default, show it if JS disabled
+      //- bibtex source hidden by default, show it if JS disabled
       style.
         #bibtex { display: block;}
     table#pubTable.publications.display
@@ -20,7 +21,6 @@ script(type='text/javascript').
   $(document).ready(function() {
     // Load .bib data.
     $.get('/publications/iit.bib', function (data) {
-      console.log
       $('#bibtex').html(data)
       // Render .bib data.
       bibtexify('#bibtex', 'pubTable', {
