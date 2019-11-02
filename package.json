@@ -29,7 +29,7 @@
     "grunt-shell": "1.1.2",
     "grunt-wintersmith": "0.0.2",
     "marked": "~> 0.3.9",
-    "moment": "~> 2.11.2",
+    "moment": "~> 2.24.0",
     "nib": "1.1.0",
     "s3-upload": "0.0.3",
     "typogr": "0.6.5",
