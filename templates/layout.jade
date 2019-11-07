@@ -17,7 +17,9 @@ html(lang='en')
       ga('send', 'pageview');
     link(rel='stylesheet', href='/css/main.css?v=0.0.5')
     //- jQuery
-    script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    script(type="text/javascript", async, src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    //- MathJax
+    script(type="text/javascript", async, src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML")
   body
     #top-navbar.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
       .container
@@ -48,7 +50,7 @@ html(lang='en')
             li.visible-lg
               a(href="https://sleepandconsciousness.wiscweb.wisc.edu", target="_blank") WISC
     .container#content
-      != typogr(page.html).typogrify()
+      != typogr(page.html).chain().amp().widont().smartypants().initQuotes().ord().value()
       block content
     .footer
       .container-fluid
