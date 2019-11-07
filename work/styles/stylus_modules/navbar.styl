@@ -2,6 +2,7 @@
   border none
   color sol_secondary
 .navbar
+  height navbar_height
   .navbar-brand
     font-family display_font
     font-size 120%
@@ -18,7 +19,7 @@
           background-color darken(navbar_background, 80%)
 
 // xs
-unquote("@media (max-width: "+xs_max+") {")
+unquote("@media (max-width: 991px) {")
 
 navlink_xs_left_right_padding = 15px
 navlink_hover_highlight_width = 5px
@@ -35,7 +36,7 @@ navlink_hover_highlight_width = 5px
 unquote("}")
 
 // sm, md, lg
-unquote("@media (min-width: "+sm_min+") {")
+unquote("@media (min-width: 991px) {")
 .navbar-inverse
   ul.navbar-nav
     >li>a
