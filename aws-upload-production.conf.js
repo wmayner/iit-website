@@ -8,5 +8,6 @@ module.exports = {
       , "js/**/*.js"
       , "download/*"
       , "publications/*"
+      , "actual-causation/*"
     ]
 }
