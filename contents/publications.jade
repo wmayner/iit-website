@@ -31,7 +31,8 @@ script(type='text/javascript').
       $('.sorting_2').remove()
       // Add bootstrap classes.
       $('#pubTable').addClass('table table-hover table-striped table-responsive table-bordered')
-
+      // Remove styling added by bib-list.js
+      $('#pubTable').removeAttr('style')
       // Initialize tooltips
       $('[data-toggle="tooltip"]').tooltip()
     });
