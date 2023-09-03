@@ -1,0 +1,34 @@
+---
+template: layout.jade
+---
+
+.row#actual-causation
+  .col-md-12
+    h1.title Actual Causation
+    p Actual causation is concerned with the question: “What caused what?” Consider a transition between two states within a system of interacting elements, such as an artificial neural network, or a biological brain circuit. Which combination of synapses caused the neuron to fire? Which image features caused the classifier to misinterpret the picture? Even detailed knowledge of the system’s causal network, its elements, their states, connectivity, and dynamics does not automatically provide a straightforward answer to the “what caused what?” question.
+    ul.nav.nav-tabs
+      li.active(role="presentation")
+        a(href='/actual-causation/theory.html') Theory
+      li(role="presentation")
+        a(href='/actual-causation/simulation.html') Simulation
+.row
+  .col-md-12
+    figure.actual-causation-figure#actual-causation-figure-1.pull-right
+      img.img-responsive(src="/img/actual-causation-fig1.png")
+      figcaption Actual causation is concerned with the question “What caused what?”
+    p To address this question in a principled manner, we have developed a formal account of actual causation based on the five causal principles of integrated information theory (IIT)—namely, <em>existence</em> (here: realization), <em>composition</em>, <em>information</em>, <em>integration</em>, and <em>exclusion</em>. The formalism is generally applicable to discrete Markovian dynamical systems constituted of interacting elements and naturally extends from deterministic to probabilistic causal networks, and also from binary to multi-valued variables. Finally, it allows us to quantify the causal strength between an occurrence and its cause or effect in informational terms (<a href="https://doi.org/10.3390/e21050459">Albantakis et al. 2019)</a>.
+    p.clearfix \[ \alpha_{\textrm{cause}}(x_{t-1}, \; y_t) = \log_2 \left( \frac{\pi(x_{t-1} \mid y_t)}{\pi(x_{t-1} \mid y_t)_{\textrm{MIP}}} \right) \]
+    figure.actual-causation-figure#actual-causation-figure-2.pull-right
+      img.img-responsive(src="/img/actual-causation-fig2.png")
+      figcaption The actual cause of the XOR gate <em>X</em> to be ‘on’ (\(1\)) at time \(t\) is the second-order occurrence \(CM_{t-1} = (1,0)\). The individual occurrences \(C_{t-1} = 1\) or \(M_{t-1} = 0\) taken by themselves (while the other element is considered undetermined) do not specify any causal information about \(X_t = 1\).
+    p As shown in <a href="https://arxiv.org/abs/1904.02995">Juel et al. 2019</a>, we can, moreover, use the Actual Causation framework to trace the causes of an action back in time (“causes of causes”) and evaluate the spatial and temporal extent to which internal mechanisms and states contributed to the actual causes of an agent’s actions, as opposed to being driven by its sensory inputs.
+.clearfix
+  hr
+  .row
+    .col-md-12
+      h2 References
+      ol.references
+        li Albantakis L, Marshall W, Hoel E, Tononi G (2019). <a href="https://doi.org/10.3390/e21050459">What caused what? A quantitative account of actual causation using dynamical causal networks</a>. Entropy, 21 (5), pp. 459.
+        li Juel BE, Comolatti R, Tononi G, Albantakis L (2019). <a href="https://arxiv.org/abs/1904.02995">When is an action caused from within? Quantifying the causal chain leading to actions in simulated agents</a>. <em>arXiv preprint arXiv:1904.02995</em>.
+      h2 Acknowledgements
+      p This demo was made possible by funding from an FQXi Mini Grant (FQXi-MGB-1810) and through the support of a grant from Templeton World Charity Foundation, Inc. (TWCF0196).

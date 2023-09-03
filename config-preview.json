@@ -1,27 +1,27 @@
 {
   "locals": {
-    "url": "http://localhost:8080"
-  , "title": "Integrated Information Theory"
-  , "name": "Integrated Information Theory"
-  , "owner": "Wisconsin Institute for Sleep and Consciousness, University of Wisconsin–Madison"
-  , "description": "A theory of consciousness"
-  }
-, "require": {
+    "url": "http://localhost:8080",
+    "title": "Integrated Information Theory",
+    "name": "Integrated Information Theory",
+    "owner": "Wisconsin Institute for Sleep and Consciousness, University of Wisconsin–Madison",
+    "description": "A theory of consciousness"
+  },
+  "require": {
+    "moment": "moment",
     "typogr": "typogr"
-  , "moment": "moment"
-  }
-, "jade": {
+  },
+  "jade": {
     "pretty": true
-  }
-, "plugins": [
-    "./node_modules/wintersmith-jade"
-  , "./node_modules/wintersmith-stylus"
-]
-, "markdown": {
-    "smartLists": true
-  , "smartypants": true
-  }
-, "ignore": [
+  },
+  "plugins": [
+    "./node_modules/wintersmith-jade",
+    "./node_modules/wintersmith-stylus"
+  ],
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "ignore": [
     "**/.DS_Store"
   ]
 }

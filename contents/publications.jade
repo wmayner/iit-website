@@ -2,25 +2,21 @@
 template: layout.jade
 ---
 
-.row
-  .col-sm-12
-    a(href="http://www.mdpi.com/journal/entropy/special_issues/integrated", target="_blank")
-      img.img-responsive.img-rounded.center-block#entropy-banner(src='/img/entropy-banner.png', alt="Call for papers for a Special Issue in Entropy: Integrated Information Theory")
+include iit-header.jade
 .row
   .col-sm-12
     h1.first.page-header Selected Publications
     noscript
-      // bibtex source hidden by default, show it if JS disabled
+      //- bibtex source hidden by default, show it if JS disabled
       style.
         #bibtex { display: block;}
     table#pubTable.publications.display
     pre#bibtex(style='display:none;')
-script(type='text/javascript', src='/js/bib-list.js')
+script(type='text/javascript', src='/js/bib-list.js?v=1')
 script(type='text/javascript').
   $(document).ready(function() {
     // Load .bib data.
     $.get('/publications/iit.bib', function (data) {
-      console.log
       $('#bibtex').html(data)
       // Render .bib data.
       bibtexify('#bibtex', 'pubTable', {
@@ -31,7 +27,8 @@ script(type='text/javascript').
       $('.sorting_2').remove()
       // Add bootstrap classes.
       $('#pubTable').addClass('table table-hover table-striped table-responsive table-bordered')
-
+      // Remove styling added by bib-list.js
+      $('#pubTable').removeAttr('style')
       // Initialize tooltips
       $('[data-toggle="tooltip"]').tooltip()
     });

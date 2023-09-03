@@ -9,20 +9,18 @@
     color sol_background
   ul.navbar-nav
     >li>a
-        padding-left 20px
-        padding-right 20px
-        color inherit
-        &.active, &:hover, &:focus
-          color lighten(sol_secondary, 50%)
-        &.active, &:active
-          background-color darken(navbar_background, 80%)
+      padding-left 20px
+      padding-right 20px
+      color inherit
+      &.active, &:hover, &:focus
+        color lighten(sol_secondary, 50%)
+      &.active, &:active
+        background-color darken(navbar_background, 80%)
 
 // xs
-unquote("@media (max-width: "+xs_max+") {")
-
+unquote("@media (max-width: 991px) {")
 navlink_xs_left_right_padding = 15px
 navlink_hover_highlight_width = 5px
-
 .navbar-inverse
   ul.navbar-nav
     margin-top 1px
@@ -32,13 +30,15 @@ navlink_hover_highlight_width = 5px
       &.active, &:hover, &:focus
         padding-left navlink_xs_left_right_padding - navlink_hover_highlight_width
         border-left navlink_hover_highlight_width solid cyan
+
 unquote("}")
 
 // sm, md, lg
-unquote("@media (min-width: "+sm_min+") {")
+unquote("@media (min-width: 991px) {")
 .navbar-inverse
   ul.navbar-nav
     >li>a
+      height navbar_height
       &.active, &:hover, &:focus
         padding-bottom 10px
         border-bottom 5px solid cyan

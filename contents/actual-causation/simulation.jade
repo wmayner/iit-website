@@ -1,0 +1,28 @@
+---
+template: layout.jade
+---
+
+.row#actual-causation
+  .col-md-12
+    h1.title Actual Causation
+    p Actual causation is concerned with the question: “What caused what?” Consider a transition between two states within a system of interacting elements, such as an artificial neural network, or a biological brain circuit. Which combination of synapses caused the neuron to fire? Which image features caused the classifier to misinterpret the picture? Even detailed knowledge of the system’s causal network, its elements, their states, connectivity, and dynamics does not automatically provide a straightforward answer to the “what caused what?” question.
+    ul.nav.nav-tabs
+      li(role="presentation")
+        a(href='/actual-causation/theory.html') Theory
+      li.active(role="presentation")
+        a(href='/actual-causation/simulation.html') Simulation
+
+#actual-causation-simulation-wrapper
+  #actual-causation-simulation-description 
+    p Artificial neural networks (ANNs), such as the classifier displayed below, provide a rich test bed for theoretical developments on actual causation. This small interactive demo shows that our actual causation measure can be employed to evaluate which neurons in the network are most relevant for determining the final outcome, or the state of neurons in intermediate layers.
+    p The neural network has been trained on the Iris data set (where the input feature vector was first translated into a 10-bit string). Connection strengths are indicated by the thickness of the lines between neurons. Four example inputs can be tested. Black indicates state <code>1</code>, white state <code>0</code>. The continuous activation states of the intermediate layers are binarized around 0 (> 0 means <code>1</code>) to facilitate the causal analysis. It is possible to select two layers using the buttons on the right in order to compute the associated causal account ("what caused what"). Alternatively, sets of neurons from two layers can be selected by clicking directly on the neurons to compute the strength (\(\alpha_{cause}\)) of their causal link. The inset on the bottom right shows the average involvement (summed causal strength) of each neuron in determining the output for a given class of inputs. To date, the full theoretical analysis can only be applied to rather small neural networks. Our goal is to utilize ANNs to test and develop practical approximations of the actual causation formalism.
+  iframe#actual-causation-simulation(style='', width='1140px', height='800px', frameborder='0', scrolling='yes', src='https://master.d28vdg92wzfkh8.amplifyapp.com/')
+.clearfix
+  .row
+    .col-md-12
+      h2 References
+      ol.references
+        li Albantakis L, Marshall W, Hoel E, Tononi G (2019). <a href="https://doi.org/10.3390/e21050459">What caused what? A quantitative account of actual causation using dynamical causal networks</a>. Entropy, 21 (5), pp. 459.
+        li Juel BE, Comolatti R, Tononi G, Albantakis L (2019). <a href="https://arxiv.org/abs/1904.02995">When is an action caused from within? Quantifying the causal chain leading to actions in simulated agents.</a> <em>arXiv preprint arXiv:1904.02995</em>.
+      h2 Acknowledgements
+      p This demo was made possible by funding from an FQXi Mini Grant (FQXi-MGB-1810) and through the support of a grant from Templeton World Charity Foundation, Inc. (TWCF0196).

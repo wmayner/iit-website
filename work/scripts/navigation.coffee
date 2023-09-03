@@ -6,7 +6,7 @@ updateNavlinks = ->
   unless page is ""
     $(".navbar a").removeClass 'active'
     if hash is ""
-      $(".navbar a[href='/#{page}']").addClass 'active'
+      $(".navbar a[href^='/#{page}']").addClass 'active'
     else
       $(".navbar a[href^='/#{page}#{hash}']").addClass 'active'
 

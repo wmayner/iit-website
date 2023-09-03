@@ -52,14 +52,6 @@ module.exports = (grunt) ->
         }
       }
 
-    coffeelint:
-      options: {
-        'max_line_length': {
-          'level': 'warn'
-        }
-      }
-      work: ["work/scripts/**/*.coffee", "Gruntfile.coffee"]
-
     wintersmith:
       remote:
         options:
@@ -118,7 +110,7 @@ module.exports = (grunt) ->
     watch:
       js:
         files: ["work/scripts/**/*.coffee", "Gruntfile.coffee"]
-        tasks: ["coffeelint:work", "coffee:compile"]
+        tasks: ["coffee:compile"]
       stylus:
         files: ["work/styles/**/*.styl"]
         tasks: ["stylus:dev"]
@@ -155,7 +147,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-stylus"
   grunt.loadNpmTasks "grunt-contrib-clean"
   grunt.loadNpmTasks "grunt-contrib-coffee"
-  grunt.loadNpmTasks "grunt-coffeelint"
   grunt.loadNpmTasks "grunt-shell"
   grunt.loadNpmTasks "grunt-line-remover"
   grunt.loadNpmTasks "grunt-contrib-cssmin"
